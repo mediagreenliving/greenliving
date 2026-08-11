@@ -908,11 +908,13 @@ ul {
 
 .associate-item {
   flex-shrink: 0;
-  padding: 24px 32px;
+  padding: 16px 24px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 24px;
-  min-width: 280px;
+  justify-content: center;
+  gap: 12px;
+  min-width: 220px;
 }
 
 .associate-icon {
@@ -933,10 +935,22 @@ ul {
   border-color: var(--green-300);
 }
 
+.associate-icon img,
+.associate-detail-icon img {
+  filter: brightness(0) opacity(0.75);
+  transition: var(--transition-smooth);
+}
+
+.associate-item:hover .associate-icon img,
+.associate-detail-card:hover .associate-detail-icon img {
+  filter: brightness(0) opacity(1);
+}
+
 .associate-name {
   font-weight: 700;
   font-size: 0.95rem;
   white-space: nowrap;
+  text-align: center;
 }
 
 .associate-type {
