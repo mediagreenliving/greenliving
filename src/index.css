@@ -1580,11 +1580,16 @@ ul {
   }
 
   .hero {
-    padding-top: 140px;
+    padding-top: 100px;
   }
 
   .hero-title {
-    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
   }
   
   .page-hero {
@@ -1592,13 +1597,25 @@ ul {
   }
 
   .hero-stats {
-    gap: 24px;
-    flex-direction: column;
-    align-items: center;
+    gap: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-stat {
+    flex: 1;
   }
 
   .hero-stat-number {
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.65rem;
   }
 
   .sectors-grid, .products-grid, .associates-detail-grid {
