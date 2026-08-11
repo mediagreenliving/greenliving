@@ -172,7 +172,7 @@ export default function Home() {
         </div>
 
         <div style={{ textAlign: 'center', marginTop: '40px' }} className="reveal">
-          <Link to="/associates" className="btn-secondary" style={{ display: 'inline-flex' }}>
+          <Link to="/associates" className="btn-primary" style={{ display: 'inline-flex' }}>
             View All Partners →
           </Link>
         </div>
