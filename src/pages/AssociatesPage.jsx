@@ -10,7 +10,7 @@ export default function AssociatesPage() {
     { name: 'TATA Group', type: 'Conglomerate', image: '/images/Associates/tata logo.svg', desc: 'Trusted carbon solutions partner across multiple TATA group companies in steel and metals.' },
     { name: 'Hindalco Industries', type: 'Metals & Mining — Aditya Birla Group', image: '/images/Associates/hindalco logo.webp', desc: 'Premium carbon anode and CPC supply for one of India\'s largest aluminium producers.' },
     { name: 'Vedanta Limited', type: 'Natural Resources', image: '/images/Associates/vedanta-logo.svg', desc: 'Supplying carbon products for Vedanta\'s aluminium and zinc smelting operations across India.' },
-    { name: 'BALCO', type: 'Aluminium — Vedanta Group', icon: '🔩', desc: 'Dedicated carbon supply partnership for Bharat Aluminium Company\'s smelter operations.' },
+    { name: 'BALCO', type: 'Aluminium — Vedanta Group', image: '/images/Our Compliances/BALCO_Logo.jpg', desc: 'Dedicated carbon supply partnership for Bharat Aluminium Company\'s smelter operations.' },
   ]
 
   const certifications = [

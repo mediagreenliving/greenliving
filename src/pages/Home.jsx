@@ -32,7 +32,7 @@ export default function Home() {
     { name: 'TATA', image: '/images/Associates/tata logo.svg' },
     { name: 'Hindalco', image: '/images/Associates/hindalco logo.webp' },
     { name: 'Vedanta', image: '/images/Associates/vedanta-logo.svg' },
-    { name: 'Balco', icon: '🔩' },
+    { name: 'Balco', image: '/images/Our Compliances/BALCO_Logo.jpg' },
   ]
   const doubled = [...associates, ...associates]
 
