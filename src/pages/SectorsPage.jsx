@@ -14,7 +14,7 @@ export default function SectorsPage() {
     },
     {
       image: '/images/sec_auto.png', title: 'Auto Components',
-      desc: 'Precision carbon solutions for automotive manufacturing — from brake components and gaskets to engine parts and carbon fiber composites for next-generation vehicles.',
+      desc: 'Precision carbon solutions for automotive manufacturing, from brake components and gaskets to engine parts and carbon fiber composites for next-generation vehicles.',
       keyProducts: ['Carbon Paste', 'Carburiser', 'Carbon Blocks']
     },
     {
@@ -24,7 +24,7 @@ export default function SectorsPage() {
     },
     {
       image: '/images/sec_steel.png', title: 'Iron & Steel',
-      desc: 'The backbone of our business — essential carbon inputs for steelmaking. From PCI coal for blast furnace injection to met coke for smelting, we power India\'s steel industry.',
+      desc: 'The backbone of our business: essential carbon inputs for steelmaking. From PCI coal for blast furnace injection to met coke for smelting, we power India\'s steel industry.',
       keyProducts: ['PCI Coal', 'Met Coke', 'Anthracite Coal', 'Coke Fines']
     },
     {
