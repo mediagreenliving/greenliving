@@ -889,7 +889,7 @@ ul {
 
 .marquee-track {
   display: flex;
-  gap: 24px;
+  gap: 48px;
   animation: marquee 30s linear infinite;
   width: max-content;
 }
@@ -900,22 +900,22 @@ ul {
 
 .associate-item {
   flex-shrink: 0;
-  padding: 16px 24px;
+  padding: 24px 32px;
   display: flex;
   align-items: center;
-  gap: 16px;
-  min-width: 220px;
+  gap: 24px;
+  min-width: 280px;
 }
 
 .associate-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
   background: var(--bg-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 2rem;
   flex-shrink: 0;
   border: 1px solid var(--border-light);
 }
@@ -1468,6 +1468,12 @@ ul {
   font-size: 0.9rem;
   color: var(--text-primary);
   margin-bottom: 12px;
+}
+
+.associate-name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-primary);
 }
 
 .sector-product-tags {
