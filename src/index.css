@@ -1618,6 +1618,27 @@ ul {
     font-size: 0.65rem;
   }
 
+  .hero-buttons {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-buttons a {
+    width: auto;
+    flex: 1;
+    justify-content: center;
+    padding: 12px 12px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  
+  .btn-primary svg, .btn-secondary svg {
+    display: none;
+  }
+
   .sectors-grid, .products-grid, .associates-detail-grid {
     grid-template-columns: 1fr;
   }
@@ -1681,26 +1702,5 @@ ul {
   
   .contact-form {
     padding: 24px 16px;
-  }
-  
-  .hero-buttons {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 8px;
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .hero-buttons a {
-    width: auto;
-    flex: 1;
-    justify-content: center;
-    padding: 12px 12px;
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
-  
-  .btn-primary svg, .btn-secondary svg {
-    display: none;
   }
 }
