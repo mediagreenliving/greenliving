@@ -118,28 +118,32 @@ export default function AboutPage() {
         <div className="container">
           <div className="vision-mission-grid">
             <div className="reveal">
-              <div className="supply-chain-card">
-                <div className="supply-icon" style={{ width: '120px', height: '120px', marginBottom: '20px' }}>
+              <div className="supply-chain-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <div style={{ flex: 1 }}>
+                  <h4>Our Vision</h4>
+                  <p style={{ marginBottom: '20px' }}>
+                    To be the most trusted and preferred strategic carbon solutions partner in India and across global
+                    markets, driving industrial excellence through quality, reliability, and sustainable practices.
+                  </p>
+                </div>
+                <div className="supply-icon" style={{ width: '120px', height: '120px', marginBottom: 0, marginTop: 'auto' }}>
                   <LottiePlayer animationPath="/images/Our Vision.json" style={{ width: '100%', height: '100%' }} />
                 </div>
-                <h4>Our Vision</h4>
-                <p>
-                  To be the most trusted and preferred strategic carbon solutions partner in India and across global
-                  markets, driving industrial excellence through quality, reliability, and sustainable practices.
-                </p>
               </div>
             </div>
             <div className="reveal reveal-delay-2">
-              <div className="supply-chain-card">
+              <div className="supply-chain-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <div className="supply-icon" style={{ width: '120px', height: '120px', marginBottom: '20px' }}>
                   <LottiePlayer animationPath="/images/Mission.json" style={{ width: '100%', height: '100%' }} />
                 </div>
-                <h4>Our Mission</h4>
-                <p>
-                  To supply premium carbon and coal-based products with unmatched consistency, competitive pricing,
-                  and an end-to-end logistics capability that secures our customers' supply chains across
-                  every industrial sector we serve.
-                </p>
+                <div style={{ flex: 1 }}>
+                  <h4>Our Mission</h4>
+                  <p>
+                    To supply premium carbon and coal-based products with unmatched consistency, competitive pricing,
+                    and an end-to-end logistics capability that secures our customers' supply chains across
+                    every industrial sector we serve.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
