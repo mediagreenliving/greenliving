@@ -8,7 +8,7 @@ export default function SectorsPage() {
       keyProducts: ['High-purity Graphite', 'Carbon Blocks', 'Specialty Carbon']
     },
     {
-      image: '/images/sec_auto.png', title: 'Defense Sector',
+      image: '/images/sec_defense.png', title: 'Defense Sector',
       desc: 'Strategic carbon materials for defense applications including vehicle armoring, aerospace components, and military-grade manufacturing. Trusted by the Indian Navy and defense establishments.',
       keyProducts: ['Carbon Composites', 'Specialty Carbon', 'Activated Carbon']
     },
@@ -18,7 +18,7 @@ export default function SectorsPage() {
       keyProducts: ['Carbon Paste', 'Carburiser', 'Carbon Blocks']
     },
     {
-      image: '/images/sec_steel.png', title: 'Foundry',
+      image: '/images/sec_foundry.png', title: 'Foundry',
       desc: 'High-grade carbon additives for metal casting and foundry operations. Our carburisers and carbon raisers ensure optimal carbon content and superior casting quality.',
       keyProducts: ['Carburiser', 'Carbon Raiser', 'Met Coke']
     },
@@ -28,12 +28,12 @@ export default function SectorsPage() {
       keyProducts: ['PCI Coal', 'Met Coke', 'Anthracite Coal', 'Coke Fines']
     },
     {
-      image: '/images/sec_steel.png', title: 'Aluminium Sector',
+      image: '/images/sec_aluminium.png', title: 'Aluminium Sector',
       desc: 'Pre-baked carbon anodes, CPC, and carbon paste for aluminium smelting operations. Serving major aluminium producers like NALCO, Hindalco, Vedanta, and Balco.',
       keyProducts: ['Carbon Anode', 'CPC', 'Carbon Paste']
     },
     {
-      image: '/images/sec_steel.png', title: 'Carbon Paste',
+      image: '/images/sec_foundry.png', title: 'Carbon Paste',
       desc: 'Specialised carbon paste manufacturing for electrode production in ferroalloy, calcium carbide, and submerged arc furnace applications.',
       keyProducts: ['Electrode Paste', 'Carbon Paste', 'CPC']
     },
@@ -43,7 +43,7 @@ export default function SectorsPage() {
       keyProducts: ['Activated Carbon', 'Granular Activated Carbon']
     },
     {
-      image: '/images/sec_steel.png', title: 'Glass Industry',
+      image: '/images/sec_glass.png', title: 'Glass Industry',
       desc: 'Carbon-based reducing agents and energy materials for glass production furnaces. Our products help maintain the precise temperatures required for high-quality glass manufacturing.',
       keyProducts: ['Pet Coke', 'Thermal Coal', 'Carbon Fines']
     },

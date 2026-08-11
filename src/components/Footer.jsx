@@ -10,11 +10,8 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link to="/" className="nav-logo" style={{ marginBottom: '8px' }}>
-              <div className="nav-logo-icon">G</div>
-              <div className="nav-logo-text">
-                GREEN<span>LIVING</span>
-              </div>
+            <Link to="/" className="nav-logo" style={{ marginBottom: '16px', display: 'inline-block' }}>
+              <img src="/logo.jpeg" alt="Greenliving Group Logo" style={{ height: '56px', objectFit: 'contain' }} />
             </Link>
             <p>
               India's premier strategic carbon solutions provider, powering industries across

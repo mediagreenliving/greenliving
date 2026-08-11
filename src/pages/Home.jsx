@@ -5,22 +5,22 @@ import StatsBar from '../components/StatsBar'
 export default function Home() {
   const featuredSectors = [
     { image: '/images/sec_nuclear.png', title: 'Nuclear Energy', desc: 'Carbon products for nuclear reactors and energy infrastructure' },
-    { image: '/images/sec_auto.png', title: 'Defense Sector', desc: 'Strategic materials for defense applications and manufacturing' },
+    { image: '/images/sec_defense.png', title: 'Defense Sector', desc: 'Strategic materials for defense applications and manufacturing' },
     { image: '/images/sec_steel.png', title: 'Iron & Steel', desc: 'Essential carbon inputs for steelmaking processes' },
-    { image: '/images/sec_steel.png', title: 'Aluminium Sector', desc: 'Carbon anodes and materials for aluminium smelting' },
-    { image: '/images/sec_steel.png', title: 'Foundry', desc: 'High-grade carbon for metal casting and foundry operations' },
+    { image: '/images/sec_aluminium.png', title: 'Aluminium Sector', desc: 'Carbon anodes and materials for aluminium smelting' },
+    { image: '/images/sec_foundry.png', title: 'Foundry', desc: 'High-grade carbon for metal casting and foundry operations' },
     { image: '/images/sec_water.png', title: 'Water Filtration', desc: 'Activated carbon for water purification systems' },
   ]
 
   const featuredProducts = [
-    { image: '/images/prod_coal.png', name: 'Anthracite Coal', tag: 'Coal' },
-    { image: '/images/prod_coke.png', name: 'CPC', tag: 'Coke' },
-    { image: '/images/prod_coke.png', name: 'Met Coke', tag: 'Coke' },
-    { image: '/images/prod_anode.png', name: 'Carbon Anode', tag: 'Carbon' },
-    { image: '/images/prod_carbon.png', name: 'Activated Carbon', tag: 'Carbon' },
-    { image: '/images/prod_coke.png', name: 'Pet Coke', tag: 'Coke' },
-    { image: '/images/prod_carbon.png', name: 'Carbon Raiser', tag: 'Carbon' },
-    { image: '/images/prod_coal.png', name: 'Thermal Coal', tag: 'Coal' },
+    { image: '/images/prod_coal.png', filter: 'none', name: 'Anthracite Coal', tag: 'Coal' },
+    { image: '/images/prod_coke.png', filter: 'none', name: 'CPC', tag: 'Coke' },
+    { image: '/images/prod_coke.png', filter: 'brightness(1.15) contrast(0.9)', name: 'Met Coke', tag: 'Coke' },
+    { image: '/images/prod_anode.png', filter: 'none', name: 'Carbon Anode', tag: 'Carbon' },
+    { image: '/images/prod_carbon.png', filter: 'none', name: 'Activated Carbon', tag: 'Carbon' },
+    { image: '/images/prod_coke.png', filter: 'brightness(0.9) grayscale(0.4)', name: 'Pet Coke', tag: 'Coke' },
+    { image: '/images/prod_carbon.png', filter: 'brightness(0.8) contrast(1.4)', name: 'Carbon Raiser', tag: 'Carbon' },
+    { image: '/images/prod_coal.png', filter: 'sepia(0.2) hue-rotate(15deg) brightness(0.9)', name: 'Thermal Coal', tag: 'Coal' },
   ]
 
   const associates = [
@@ -133,7 +133,7 @@ export default function Home() {
             {featuredProducts.map((p, i) => (
               <div className="product-card reveal" key={p.name} style={{ transitionDelay: `${i * 0.06}s` }}>
                 <div className="product-image" style={{ padding: 0, overflow: 'hidden' }}>
-                  <img src={p.image} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={p.image} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: p.filter }} />
                 </div>
                 <div className="product-info">
                   <h3>{p.name}</h3>

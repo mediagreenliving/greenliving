@@ -1,5 +1,35 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { ArrowRight, Globe } from 'lucide-react'
+
+function CountUp({ end, suffix = '' }) {
+  const [count, setCount] = useState(0)
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        let start = 0;
+        const duration = 2000;
+        const increment = end / (duration / 16);
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= end) {
+            setCount(end);
+            clearInterval(timer);
+          } else {
+            setCount(Math.floor(start));
+          }
+        }, 16);
+        observer.disconnect();
+      }
+    })
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [end])
+
+  return <span ref={ref}>{count}{suffix}</span>
+}
 
 export default function Hero() {
   const canvasRef = useRef(null)
@@ -93,45 +123,36 @@ export default function Hero() {
       <div className="hero-gradient"></div>
 
       <div className="hero-content">
-        <div className="hero-badge">
-          <span className="dot"></span>
-          Strategic Carbon Solutions Since Inception
-        </div>
-
         <h1 className="hero-title">
-          <span className="green">GREENLIVING</span><br />
-          GROUP
+          Fueling Industry.<br />
+          <span className="green">Powering Progress.</span>
         </h1>
 
         <p className="hero-tagline">
-          Powering Industries with <strong>Premium Carbon Products</strong>
+          India's most trusted partner for <strong>premium carbon & fuel solutions</strong> since 2011.
         </p>
 
         <div className="hero-buttons">
           <Link to="/products" className="btn-primary">
-            Explore Products →
+            Explore Products <ArrowRight size={18} />
           </Link>
           <Link to="/contact" className="btn-secondary">
-            Contact Us
+            Partner With Us <Globe size={18} />
           </Link>
         </div>
 
         <div className="hero-stats">
           <div className="hero-stat">
-            <div className="hero-stat-number">15+</div>
-            <div className="hero-stat-label">Products</div>
+            <div className="hero-stat-number"><CountUp end={13} suffix="+" /></div>
+            <div className="hero-stat-label">Years of Excellence</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">9+</div>
-            <div className="hero-stat-label">Sectors</div>
+            <div className="hero-stat-number"><CountUp end={500} suffix="K+" /></div>
+            <div className="hero-stat-label">MT Annual Volume</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">4</div>
-            <div className="hero-stat-label">States</div>
-          </div>
-          <div className="hero-stat">
-            <div className="hero-stat-number">10+</div>
-            <div className="hero-stat-label">Partners</div>
+            <div className="hero-stat-number"><CountUp end={200} suffix="+" /></div>
+            <div className="hero-stat-label">Active Clients</div>
           </div>
         </div>
       </div>

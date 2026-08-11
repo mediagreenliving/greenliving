@@ -29,10 +29,7 @@ export default function Navbar() {
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className="container">
         <Link to="/" className="nav-logo">
-          <div className="nav-logo-icon">G</div>
-          <div className="nav-logo-text">
-            GREEN<span>LIVING</span>
-          </div>
+          <img src="/logo.jpeg" alt="Greenliving Group Logo" style={{ height: '48px', objectFit: 'contain' }} />
         </Link>
 
         <div className={`nav-links${menuOpen ? ' open' : ''}`}>
