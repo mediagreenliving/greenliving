@@ -15,12 +15,12 @@ export default function Home() {
   const featuredProducts = [
     { image: '/images/prod_coal.png', filter: 'none', name: 'Anthracite Coal', tag: 'Coal' },
     { image: '/images/prod_coke.png', filter: 'none', name: 'CPC', tag: 'Coke' },
-    { image: '/images/prod_coke.png', filter: 'brightness(1.15) contrast(0.9)', name: 'Met Coke', tag: 'Coke' },
+    { image: '/images/prod_coke.png', filter: 'brightness(1.1)', name: 'Met Coke', tag: 'Coke' },
     { image: '/images/prod_anode.png', filter: 'none', name: 'Carbon Anode', tag: 'Carbon' },
     { image: '/images/prod_carbon.png', filter: 'none', name: 'Activated Carbon', tag: 'Carbon' },
-    { image: '/images/prod_coke.png', filter: 'brightness(0.9) grayscale(0.4)', name: 'Pet Coke', tag: 'Coke' },
-    { image: '/images/prod_carbon.png', filter: 'brightness(0.8) contrast(1.4)', name: 'Carbon Raiser', tag: 'Carbon' },
-    { image: '/images/prod_coal.png', filter: 'sepia(0.2) hue-rotate(15deg) brightness(0.9)', name: 'Thermal Coal', tag: 'Coal' },
+    { image: '/images/prod_coke.png', filter: 'brightness(0.95)', name: 'Pet Coke', tag: 'Coke' },
+    { image: '/images/prod_carbon.png', filter: 'contrast(1.15)', name: 'Carbon Raiser', tag: 'Carbon' },
+    { image: '/images/prod_coal.png', filter: 'contrast(1.2)', name: 'Thermal Coal', tag: 'Coal' },
   ]
 
   const associates = [

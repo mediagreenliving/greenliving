@@ -753,13 +753,13 @@ ul {
 }
 
 .product-image {
-  height: 120px;
+  height: 240px;
   background: var(--bg-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .product-info {
