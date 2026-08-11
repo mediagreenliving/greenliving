@@ -23,6 +23,7 @@ export default function ContactPage() {
         title="Contact Us"
         subtitle="Ready to discuss your carbon requirements? Our team is here to help."
         breadcrumb="Contact"
+        bgImage="/images/sec_water.png"
       />
 
       <section className="section" style={{ background: 'var(--bg-primary)' }}>

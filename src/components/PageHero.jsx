@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function PageHero({ title, subtitle, breadcrumb, bgImage }) {
   return (
-    <section className="page-hero">
+    <section className={`page-hero ${bgImage ? 'has-bg' : ''}`}>
       {bgImage && (
         <div 
           style={{ 
@@ -12,14 +12,17 @@ export default function PageHero({ title, subtitle, breadcrumb, bgImage }) {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             zIndex: 0,
-            opacity: 0.35,
-            filter: 'grayscale(0.5)'
           }}
         ></div>
       )}
-      <div className="page-hero-bg"></div>
-      <div className="page-hero-overlay"></div>
-      <div className="container page-hero-content">
+      
+      {bgImage ? (
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(10, 15, 10, 0.7)', zIndex: 1 }}></div>
+      ) : (
+        <div className="page-hero-bg"></div>
+      )}
+      
+      <div className="container page-hero-content" style={{ position: 'relative', zIndex: 2 }}>
         <div className="page-hero-breadcrumb">
           <Link to="/">Home</Link>
           <span className="breadcrumb-sep">›</span>
