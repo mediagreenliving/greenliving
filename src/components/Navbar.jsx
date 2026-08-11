@@ -16,6 +16,15 @@ export default function Navbar() {
     setMenuOpen(false)
   }, [location])
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => { document.body.style.overflow = 'unset' }
+  }, [menuOpen])
+
   const links = [
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
