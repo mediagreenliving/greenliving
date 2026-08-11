@@ -3,13 +3,13 @@ import PageHero from '../components/PageHero'
 export default function AssociatesPage() {
   const associates = [
     { name: 'Indian Navy', type: 'Defense — Government of India', icon: '⚓', desc: 'Supplying strategic carbon materials for naval defense infrastructure and vessel manufacturing.' },
-    { name: 'Government of India', type: 'Government', icon: '🏛️', desc: 'Recognized and certified supplier under various government departments and public sector enterprises.' },
+    { name: 'Government of India', type: 'Government', image: '/images/Associates/Government of India.svg', desc: 'Recognized and certified supplier under various government departments and public sector enterprises.' },
     { name: 'Department of Atomic Energy (DAE)', type: 'Nuclear — Government of India', icon: '⚛️', desc: 'Providing high-purity carbon and graphite products for India\'s nuclear energy programme.' },
-    { name: 'Indian Oil Corporation', type: 'Energy — Maharatna PSU', icon: '🛢️', desc: 'Partnering with India\'s largest oil company for petroleum coke and carbon supply.' },
+    { name: 'Indian Oil Corporation', type: 'Energy — Maharatna PSU', image: '/images/Associates/indian oil logo.svg', desc: 'Partnering with India\'s largest oil company for petroleum coke and carbon supply.' },
     { name: 'NALCO', type: 'Aluminium — Navratna PSU', icon: '🏭', desc: 'Supplying CPC, carbon anodes, and carbon paste for aluminium smelting operations at NALCO.' },
     { name: 'TATA Group', type: 'Conglomerate', icon: '🏢', desc: 'Trusted carbon solutions partner across multiple TATA group companies in steel and metals.' },
     { name: 'Hindalco Industries', type: 'Metals & Mining — Aditya Birla Group', icon: '⛏️', desc: 'Premium carbon anode and CPC supply for one of India\'s largest aluminium producers.' },
-    { name: 'Vedanta Limited', type: 'Natural Resources', icon: '🌐', desc: 'Supplying carbon products for Vedanta\'s aluminium and zinc smelting operations across India.' },
+    { name: 'Vedanta Limited', type: 'Natural Resources', image: '/images/Associates/vedanta-logo.svg', desc: 'Supplying carbon products for Vedanta\'s aluminium and zinc smelting operations across India.' },
     { name: 'BALCO', type: 'Aluminium — Vedanta Group', icon: '🔩', desc: 'Dedicated carbon supply partnership for Bharat Aluminium Company\'s smelter operations.' },
   ]
 
@@ -42,7 +42,13 @@ export default function AssociatesPage() {
           <div className="associates-detail-grid">
             {associates.map((item, i) => (
               <div className={`associate-detail-card reveal reveal-delay-${(i % 3) + 1}`} key={i}>
-                <div className="associate-detail-icon">{item.icon}</div>
+                <div className="associate-detail-icon" style={item.image ? { background: 'transparent', boxShadow: 'none', padding: '0' } : {}}>
+                  {item.image ? (
+                    <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  ) : (
+                    item.icon
+                  )}
+                </div>
                 <div className="associate-detail-info">
                   <h3>{item.name}</h3>
                   <span className="associate-detail-type">{item.type}</span>

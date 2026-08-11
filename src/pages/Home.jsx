@@ -25,13 +25,13 @@ export default function Home() {
 
   const associates = [
     { name: 'Indian Navy', icon: '⚓' },
-    { name: 'Government of India', icon: '🏛️' },
+    { name: 'Government of India', image: '/images/Associates/Government of India.svg' },
     { name: 'DAE', icon: '⚛️' },
-    { name: 'Indian Oil', icon: '🛢️' },
+    { name: 'Indian Oil', image: '/images/Associates/indian oil logo.svg' },
     { name: 'NALCO', icon: '🏭' },
     { name: 'TATA', icon: '🏢' },
     { name: 'Hindalco', icon: '⛏️' },
-    { name: 'Vedanta', icon: '🌐' },
+    { name: 'Vedanta', image: '/images/Associates/vedanta-logo.svg' },
     { name: 'Balco', icon: '🔩' },
   ]
   const doubled = [...associates, ...associates]
@@ -164,7 +164,13 @@ export default function Home() {
           <div className="marquee-track">
             {doubled.map((item, i) => (
               <div className="associate-item" key={i}>
-                <div className="associate-icon">{item.icon}</div>
+                <div className="associate-icon" style={item.image ? { background: 'transparent', boxShadow: 'none' } : {}}>
+                  {item.image ? (
+                    <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  ) : (
+                    item.icon
+                  )}
+                </div>
                 <div className="associate-name">{item.name}</div>
               </div>
             ))}
