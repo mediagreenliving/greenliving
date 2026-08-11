@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="nav-logo" style={{ marginBottom: '16px', display: 'inline-block' }}>
-              <img src="/logo.jpeg" alt="Greenliving Group Logo" style={{ height: '56px', objectFit: 'contain' }} />
+              <img src="/images/logo.png" alt="Greenliving Group Logo" style={{ height: '56px', objectFit: 'contain' }} />
             </Link>
             <p>
               India's premier strategic carbon solutions provider, powering industries across
