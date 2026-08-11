@@ -55,6 +55,7 @@ export default function SectorsPage() {
         title="Sector Experience"
         subtitle="Delivering mission-critical carbon solutions across India's most demanding industrial sectors"
         breadcrumb="Sectors"
+        bgImage="/images/sec_defense.png"
       />
 
       <section className="section" style={{ background: 'var(--dark-800)' }}>

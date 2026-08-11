@@ -1,8 +1,22 @@
 import { Link } from 'react-router-dom'
 
-export default function PageHero({ title, subtitle, breadcrumb }) {
+export default function PageHero({ title, subtitle, breadcrumb, bgImage }) {
   return (
     <section className="page-hero">
+      {bgImage && (
+        <div 
+          style={{ 
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            zIndex: 0,
+            opacity: 0.35,
+            filter: 'grayscale(0.5)'
+          }}
+        ></div>
+      )}
       <div className="page-hero-bg"></div>
       <div className="page-hero-overlay"></div>
       <div className="container page-hero-content">

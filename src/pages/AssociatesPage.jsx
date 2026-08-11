@@ -26,8 +26,9 @@ export default function AssociatesPage() {
     <>
       <PageHero
         title="Our Associates & Partners"
-        subtitle="Partnering with India's most prestigious government and private sector organisations"
+        subtitle="Trusted by India's leading government, defense, and private sector organisations"
         breadcrumb="Associates"
+        bgImage="/images/sec_foundry.png"
       />
 
       {/* Associates Grid */}

@@ -43,6 +43,7 @@ export default function ProductsPage() {
         title="Our Products"
         subtitle="A comprehensive range of 15+ carbon and coal-based products for every industrial need"
         breadcrumb="Products"
+        bgImage="/images/sec_steel.png"
       />
 
       <section className="section" style={{ background: 'var(--bg-primary)' }}>

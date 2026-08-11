@@ -21,8 +21,9 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About Greenliving Group"
-        subtitle="India's premier strategic carbon solutions provider, powering critical industries nationwide"
+        subtitle="India's premier strategic carbon solutions provider, powering industries across nuclear energy, defense, steel, aluminium, and more."
         breadcrumb="About Us"
+        bgImage="/images/sec_nuclear.png"
       />
 
       {/* Story Section */}
