@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
-
-  { name: 'Anthracite Coal', category: 'coal', image: '/images/prod_coal.png', filter: 'none', desc: 'Ultra-high carbon content coal for industrial furnaces. Prized for low volatile matter and superior heat output.' },
-  { name: 'PCI Coal', category: 'coal', image: '/images/prod_coal.png', filter: 'brightness(1.1)', desc: 'Pulverized coal injection grade for blast furnace optimization, reducing coke consumption and improving efficiency.' },
+export default function ProductsPage() {
+  const products = [
+    { name: 'Anthracite Coal', category: 'coal', image: '/images/prod_coal.png', filter: 'none', desc: 'Ultra-high carbon content coal for industrial furnaces. Prized for low volatile matter and superior heat output.' },
+    { name: 'PCI Coal', category: 'coal', image: '/images/prod_coal.png', filter: 'brightness(1.1)', desc: 'Pulverized coal injection grade for blast furnace optimization, reducing coke consumption and improving efficiency.' },
   { name: 'Thermal Coal', category: 'coal', image: '/images/prod_coal.png', filter: 'contrast(1.2)', desc: 'Energy-grade coal for power generation, cement kilns, and industrial heating applications.' },
   
   { name: 'Activated Carbon', category: 'carbon', image: '/images/prod_carbon.png', filter: 'none', desc: 'Highly porous carbon with exceptional adsorption properties for water purification, air treatment, and chemical processing.' },
