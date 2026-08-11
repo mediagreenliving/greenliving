@@ -38,7 +38,7 @@ export default function Navbar() {
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className="container">
         <Link to="/" className="nav-logo">
-          <img src="/images/logo.webp" alt="Greenliving Group Logo" style={{ height: '64px', objectFit: 'contain' }} />
+          <img src="/images/logo.webp" alt="Greenliving Group Logo" style={{ height: '72px', objectFit: 'contain' }} />
         </Link>
 
         <div className={`nav-links${menuOpen ? ' open' : ''}`}>
