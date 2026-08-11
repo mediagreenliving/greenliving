@@ -24,13 +24,13 @@ export default function Home() {
   ]
 
   const associates = [
-    { name: 'Indian Navy', icon: '⚓' },
+    { name: 'Indian Navy', image: '/images/Associates/indian navy logo.png' },
     { name: 'Government of India', image: '/images/Associates/Government of India.svg' },
-    { name: 'DAE', icon: '⚛️' },
+    { name: 'DAE', image: '/images/Associates/Department of Atomic Energy (DAE).jpeg' },
     { name: 'Indian Oil', image: '/images/Associates/indian oil logo.svg' },
-    { name: 'NALCO', icon: '🏭' },
-    { name: 'TATA', icon: '🏢' },
-    { name: 'Hindalco', icon: '⛏️' },
+    { name: 'NALCO', image: '/images/Associates/nalco logo.svg' },
+    { name: 'TATA', image: '/images/Associates/tata logo.svg' },
+    { name: 'Hindalco', image: '/images/Associates/hindalco logo.webp' },
     { name: 'Vedanta', image: '/images/Associates/vedanta-logo.svg' },
     { name: 'Balco', icon: '🔩' },
   ]
