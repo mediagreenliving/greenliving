@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="nav-logo" style={{ marginBottom: '16px', display: 'inline-block' }}>
-              <img src="/images/logo.png" alt="Greenliving Group Logo" style={{ height: '56px', objectFit: 'contain' }} />
+              <img src="/images/logo.webp" alt="Greenliving Group Logo" style={{ height: '56px', objectFit: 'contain' }} />
             </Link>
             <p>
               India's premier strategic carbon solutions provider, powering industries across
@@ -47,11 +47,15 @@ export default function Footer() {
           <div>
             <h4>Contact Info</h4>
             <div className="footer-contact-item">
-              <span className="fc-icon">📍</span>
+              <span className="fc-icon">
+                <img src="/images/google-map-icon.svg" alt="Map" style={{ width: '20px', height: '20px' }} />
+              </span>
               <a href="https://maps.google.com/?q=306,+Edge,+Vidhan+Sabha+Road,+Mowa,+Raipur+-+492001,+Chhattisgarh,+India" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>306, Edge, Vidhan Sabha Road, Mowa, Raipur - 492001, Chhattisgarh, India</a>
             </div>
             <div className="footer-contact-item">
-              <span className="fc-icon">📞</span>
+              <span className="fc-icon">
+                <img src="/images/accept-call-icon.svg" alt="Phone" style={{ width: '20px', height: '20px' }} />
+              </span>
               <span style={{ display: 'flex', flexDirection: 'column' }}>
                 <a href="tel:+918919553938" style={{ color: 'inherit', textDecoration: 'none' }}>+91 891 955 3938</a>
                 <a href="tel:+916200349081" style={{ color: 'inherit', textDecoration: 'none' }}>+91 620 034 9081</a>

@@ -3,47 +3,47 @@ import PageHero from '../components/PageHero'
 export default function SectorsPage() {
   const sectors = [
     {
-      image: '/images/sec_nuclear.png', title: 'Nuclear Energy',
+      image: '/images/sec_nuclear.webp', title: 'Nuclear Energy',
       desc: 'We supply specialised carbon and graphite products essential for nuclear reactor components, moderators, and energy infrastructure. Our materials meet the exacting purity and performance standards demanded by India\'s atomic energy sector.',
       keyProducts: ['High-purity Graphite', 'Carbon Blocks', 'Specialty Carbon']
     },
     {
-      image: '/images/sec_defense.png', title: 'Defense Sector',
+      image: '/images/sec_defense.webp', title: 'Defense Sector',
       desc: 'Strategic carbon materials for defense applications including vehicle armoring, aerospace components, and military-grade manufacturing. Trusted by the Indian Navy and defense establishments.',
       keyProducts: ['Carbon Composites', 'Specialty Carbon', 'Activated Carbon']
     },
     {
-      image: '/images/sec_auto.png', title: 'Auto Components',
+      image: '/images/sec_auto.webp', title: 'Auto Components',
       desc: 'Precision carbon solutions for automotive manufacturing, from brake components and gaskets to engine parts and carbon fiber composites for next-generation vehicles.',
       keyProducts: ['Carbon Paste', 'Carburiser', 'Carbon Blocks']
     },
     {
-      image: '/images/sec_foundry.png', title: 'Foundry',
+      image: '/images/sec_foundry.webp', title: 'Foundry',
       desc: 'High-grade carbon additives for metal casting and foundry operations. Our carburisers and carbon raisers ensure optimal carbon content and superior casting quality.',
       keyProducts: ['Carburiser', 'Carbon Raiser', 'Met Coke']
     },
     {
-      image: '/images/sec_steel.png', title: 'Iron & Steel',
+      image: '/images/sec_steel.webp', title: 'Iron & Steel',
       desc: 'The backbone of our business: essential carbon inputs for steelmaking. From PCI coal for blast furnace injection to met coke for smelting, we power India\'s steel industry.',
       keyProducts: ['PCI Coal', 'Met Coke', 'Anthracite Coal', 'Coke Fines']
     },
     {
-      image: '/images/sec_aluminium.png', title: 'Aluminium Sector',
+      image: '/images/sec_aluminium.webp', title: 'Aluminium Sector',
       desc: 'Pre-baked carbon anodes, CPC, and carbon paste for aluminium smelting operations. Serving major aluminium producers like NALCO, Hindalco, Vedanta, and Balco.',
       keyProducts: ['Carbon Anode', 'CPC', 'Carbon Paste']
     },
     {
-      image: '/images/sec_foundry.png', title: 'Carbon Paste',
+      image: '/images/sec_foundry.webp', title: 'Carbon Paste',
       desc: 'Specialised carbon paste manufacturing for electrode production in ferroalloy, calcium carbide, and submerged arc furnace applications.',
       keyProducts: ['Electrode Paste', 'Carbon Paste', 'CPC']
     },
     {
-      image: '/images/sec_water.png', title: 'Water Filtration',
+      image: '/images/sec_water.webp', title: 'Water Filtration',
       desc: 'Activated carbon products for municipal and industrial water purification systems. Our high-adsorption activated carbon removes contaminants, chlorine, and organic compounds.',
       keyProducts: ['Activated Carbon', 'Granular Activated Carbon']
     },
     {
-      image: '/images/sec_glass.png', title: 'Glass Industry',
+      image: '/images/sec_glass.webp', title: 'Glass Industry',
       desc: 'Carbon-based reducing agents and energy materials for glass production furnaces. Our products help maintain the precise temperatures required for high-quality glass manufacturing.',
       keyProducts: ['Pet Coke', 'Thermal Coal', 'Carbon Fines']
     },
@@ -55,7 +55,7 @@ export default function SectorsPage() {
         title="Sector Experience"
         subtitle="Delivering mission-critical carbon solutions across India's most demanding industrial sectors"
         breadcrumb="Sectors"
-        bgImage="/images/sec_defense.png"
+        bgImage="/images/sec_defense.webp"
       />
 
       <section className="section" style={{ background: 'var(--dark-800)' }}>

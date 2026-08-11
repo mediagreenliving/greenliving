@@ -23,7 +23,7 @@ export default function AboutPage() {
         title="About Greenliving Group"
         subtitle="India's premier strategic carbon solutions provider, powering industries across nuclear energy, defense, steel, aluminium, and more."
         breadcrumb="About Us"
-        bgImage="/images/sec_nuclear.png"
+        bgImage="/images/sec_nuclear.webp"
       />
 
       {/* Story Section */}

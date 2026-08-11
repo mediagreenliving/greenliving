@@ -4,35 +4,35 @@ import StatsBar from '../components/StatsBar'
 
 export default function Home() {
   const featuredSectors = [
-    { image: '/images/sec_nuclear.png', title: 'Nuclear Energy', desc: 'Carbon products for nuclear reactors and energy infrastructure' },
-    { image: '/images/sec_defense.png', title: 'Defense Sector', desc: 'Strategic materials for defense applications and manufacturing' },
-    { image: '/images/sec_steel.png', title: 'Iron & Steel', desc: 'Essential carbon inputs for steelmaking processes' },
-    { image: '/images/sec_aluminium.png', title: 'Aluminium Sector', desc: 'Carbon anodes and materials for aluminium smelting' },
-    { image: '/images/sec_foundry.png', title: 'Foundry', desc: 'High-grade carbon for metal casting and foundry operations' },
-    { image: '/images/sec_water.png', title: 'Water Filtration', desc: 'Activated carbon for water purification systems' },
+    { image: '/images/sec_nuclear.webp', title: 'Nuclear Energy', desc: 'Carbon products for nuclear reactors and energy infrastructure' },
+    { image: '/images/sec_defense.webp', title: 'Defense Sector', desc: 'Strategic materials for defense applications and manufacturing' },
+    { image: '/images/sec_steel.webp', title: 'Iron & Steel', desc: 'Essential carbon inputs for steelmaking processes' },
+    { image: '/images/sec_aluminium.webp', title: 'Aluminium Sector', desc: 'Carbon anodes and materials for aluminium smelting' },
+    { image: '/images/sec_foundry.webp', title: 'Foundry', desc: 'High-grade carbon for metal casting and foundry operations' },
+    { image: '/images/sec_water.webp', title: 'Water Filtration', desc: 'Activated carbon for water purification systems' },
   ]
 
   const featuredProducts = [
-    { image: '/images/prod_coal.png', filter: 'none', name: 'Anthracite Coal', tag: 'Coal' },
-    { image: '/images/prod_coke.png', filter: 'none', name: 'CPC', tag: 'Coke' },
-    { image: '/images/prod_coke.png', filter: 'brightness(1.1)', name: 'Met Coke', tag: 'Coke' },
-    { image: '/images/prod_anode.png', filter: 'none', name: 'Carbon Anode', tag: 'Carbon' },
-    { image: '/images/prod_carbon.png', filter: 'none', name: 'Activated Carbon', tag: 'Carbon' },
-    { image: '/images/prod_coke.png', filter: 'brightness(0.95)', name: 'Pet Coke', tag: 'Coke' },
-    { image: '/images/prod_carbon.png', filter: 'contrast(1.15)', name: 'Carbon Raiser', tag: 'Carbon' },
-    { image: '/images/prod_coal.png', filter: 'contrast(1.2)', name: 'Thermal Coal', tag: 'Coal' },
+    { image: '/images/prod_coal.webp', filter: 'none', name: 'Anthracite Coal', tag: 'Coal' },
+    { image: '/images/prod_coke.webp', filter: 'none', name: 'CPC', tag: 'Coke' },
+    { image: '/images/prod_coke.webp', filter: 'brightness(1.1)', name: 'Met Coke', tag: 'Coke' },
+    { image: '/images/prod_anode.webp', filter: 'none', name: 'Carbon Anode', tag: 'Carbon' },
+    { image: '/images/prod_carbon.webp', filter: 'none', name: 'Activated Carbon', tag: 'Carbon' },
+    { image: '/images/prod_coke.webp', filter: 'brightness(0.95)', name: 'Pet Coke', tag: 'Coke' },
+    { image: '/images/prod_carbon.webp', filter: 'contrast(1.15)', name: 'Carbon Raiser', tag: 'Carbon' },
+    { image: '/images/prod_coal.webp', filter: 'contrast(1.2)', name: 'Thermal Coal', tag: 'Coal' },
   ]
 
   const associates = [
-    { name: 'Indian Navy', image: '/images/Associates/indian navy logo.png' },
+    { name: 'Indian Navy', image: '/images/Associates/indian navy logo.webp' },
     { name: 'Government of India', image: '/images/Associates/Government of India.svg' },
-    { name: 'DAE', image: '/images/Associates/Department of Atomic Energy (DAE).jpeg' },
+    { name: 'DAE', image: '/images/Associates/Department of Atomic Energy (DAE).webp' },
     { name: 'Indian Oil', image: '/images/Associates/indian oil logo.svg' },
     { name: 'NALCO', image: '/images/Associates/nalco logo.svg' },
     { name: 'TATA', image: '/images/Associates/tata logo.svg' },
     { name: 'Hindalco', image: '/images/Associates/hindalco logo.webp' },
     { name: 'Vedanta', image: '/images/Associates/vedanta-logo.svg' },
-    { name: 'Balco', image: '/images/Our Compliances/BALCO_Logo.jpg' },
+    { name: 'Balco', image: '/images/Our Compliances/BALCO_Logo.webp' },
   ]
   const doubled = [...associates, ...associates]
 
@@ -166,7 +166,7 @@ export default function Home() {
               <div className="associate-item" key={i}>
                 <div className="associate-icon" style={item.image ? { background: 'transparent', boxShadow: 'none' } : {}}>
                   {item.image ? (
-                    <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                    <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }} />
                   ) : (
                     item.icon
                   )}

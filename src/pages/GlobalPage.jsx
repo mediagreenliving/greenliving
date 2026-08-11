@@ -21,7 +21,7 @@ export default function GlobalPage() {
         title="Global Presence"
         subtitle="Connecting India's carbon resources with the world's industrial markets"
         breadcrumb="Global Presence"
-        bgImage="/images/sec_aluminium.png"
+        bgImage="/images/sec_aluminium.webp"
       />
 
       {/* Global Trade */}
