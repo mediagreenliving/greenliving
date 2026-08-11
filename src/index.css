@@ -1579,6 +1579,10 @@ ul {
     display: flex;
   }
 
+  .hero {
+    padding-top: 140px;
+  }
+
   .hero-title {
     font-size: clamp(2.2rem, 8vw, 3.5rem);
   }
