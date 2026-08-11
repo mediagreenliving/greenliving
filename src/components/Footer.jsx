@@ -62,7 +62,9 @@ export default function Footer() {
               </span>
             </div>
             <div className="footer-contact-item">
-              <span className="fc-icon">✉️</span>
+              <span className="fc-icon">
+                <img src="/images/gmail-icon.svg" alt="Email" style={{ width: '20px', height: '20px' }} />
+              </span>
               <a href="mailto:greenliving.vizag@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>greenliving.vizag@gmail.com</a>
             </div>
           </div>
