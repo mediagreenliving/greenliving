@@ -48,15 +48,18 @@ export default function Footer() {
             <h4>Contact Info</h4>
             <div className="footer-contact-item">
               <span className="fc-icon">📍</span>
-              <span>306, Edge, Vidhan Sabha Road, Mowa, Raipur - 492001, Chhattisgarh, India</span>
+              <a href="https://maps.google.com/?q=306,+Edge,+Vidhan+Sabha+Road,+Mowa,+Raipur+-+492001,+Chhattisgarh,+India" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>306, Edge, Vidhan Sabha Road, Mowa, Raipur - 492001, Chhattisgarh, India</a>
             </div>
             <div className="footer-contact-item">
               <span className="fc-icon">📞</span>
-              <span>+91 891 955 3938<br />+91 620 034 9081</span>
+              <span style={{ display: 'flex', flexDirection: 'column' }}>
+                <a href="tel:+918919553938" style={{ color: 'inherit', textDecoration: 'none' }}>+91 891 955 3938</a>
+                <a href="tel:+916200349081" style={{ color: 'inherit', textDecoration: 'none' }}>+91 620 034 9081</a>
+              </span>
             </div>
             <div className="footer-contact-item">
               <span className="fc-icon">✉️</span>
-              <span>greenliving.vizag@gmail.com</span>
+              <a href="mailto:greenliving.vizag@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>greenliving.vizag@gmail.com</a>
             </div>
           </div>
         </div>
