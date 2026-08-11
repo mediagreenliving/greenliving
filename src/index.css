@@ -1684,12 +1684,23 @@ ul {
   }
   
   .hero-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
     width: 100%;
+    justify-content: center;
   }
   
   .hero-buttons a {
-    width: 100%;
+    width: auto;
+    flex: 1;
     justify-content: center;
+    padding: 12px 12px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  
+  .btn-primary svg, .btn-secondary svg {
+    display: none;
   }
 }
