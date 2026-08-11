@@ -1058,6 +1058,12 @@ ul {
   gap: 48px;
 }
 
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1569,6 +1575,7 @@ ul {
   .about-grid,
   .global-grid,
   .compliance-grid,
+  .vision-mission-grid,
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 40px;

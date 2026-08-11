@@ -1,4 +1,39 @@
+import { useEffect, useRef } from 'react'
 import PageHero from '../components/PageHero'
+
+function LottiePlayer({ animationPath, style }) {
+  const containerRef = useRef(null)
+
+  useEffect(() => {
+    let anim
+    let active = true
+
+    if (containerRef.current && window.lottie) {
+      fetch(animationPath)
+        .then((res) => res.json())
+        .then((data) => {
+          if (active && containerRef.current) {
+            containerRef.current.innerHTML = '' // Prevent duplicates
+            anim = window.lottie.loadAnimation({
+              container: containerRef.current,
+              renderer: 'svg',
+              loop: true,
+              autoplay: true,
+              animationData: data,
+            })
+          }
+        })
+        .catch((err) => console.error('Error loading Lottie animation:', err))
+    }
+
+    return () => {
+      active = false
+      if (anim) anim.destroy()
+    }
+  }, [animationPath])
+
+  return <div ref={containerRef} style={style} />
+}
 
 export default function AboutPage() {
   const values = [
@@ -81,10 +116,12 @@ export default function AboutPage() {
       {/* Vision / Mission */}
       <section className="section" style={{ background: 'var(--dark-900)' }}>
         <div className="container">
-          <div className="compliance-grid">
+          <div className="vision-mission-grid">
             <div className="reveal">
               <div className="supply-chain-card">
-                <div className="supply-icon">🔭</div>
+                <div className="supply-icon" style={{ width: '120px', height: '120px', marginBottom: '20px' }}>
+                  <LottiePlayer animationPath="/images/Our Vision.json" style={{ width: '100%', height: '100%' }} />
+                </div>
                 <h4>Our Vision</h4>
                 <p>
                   To be the most trusted and preferred strategic carbon solutions partner in India and across global
@@ -94,7 +131,9 @@ export default function AboutPage() {
             </div>
             <div className="reveal reveal-delay-2">
               <div className="supply-chain-card">
-                <div className="supply-icon">🚀</div>
+                <div className="supply-icon" style={{ width: '120px', height: '120px', marginBottom: '20px' }}>
+                  <LottiePlayer animationPath="/images/Mission.json" style={{ width: '100%', height: '100%' }} />
+                </div>
                 <h4>Our Mission</h4>
                 <p>
                   To supply premium carbon and coal-based products with unmatched consistency, competitive pricing,
