@@ -1555,14 +1555,37 @@ ul {
     gap: 40px;
   }
 
-  .stats-grid, .states-grid {
+  .states-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .stats-grid .stat-item {
+    padding: 10px 4px;
+  }
+  .stats-grid .stat-number {
+    font-size: 1.4rem;
+  }
+  .stats-grid .stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0;
   }
 }
 
 @media (max-width: 768px) {
   :root {
     --section-padding: 80px 0;
+  }
+
+  .navbar {
+    padding: 12px 0;
+  }
+  
+  .navbar.scrolled {
+    padding: 8px 0;
   }
 
   .nav-logo {
@@ -1573,7 +1596,7 @@ ul {
   .nav-logo img {
     max-width: 65vw;
     height: auto !important;
-    max-height: 64px;
+    max-height: 42px;
   }
 
   .nav-links {
@@ -1723,7 +1746,7 @@ ul {
 }
 
 @media (max-width: 480px) {
-  .stats-grid, .states-grid {
+  .states-grid {
     grid-template-columns: 1fr;
   }
 
