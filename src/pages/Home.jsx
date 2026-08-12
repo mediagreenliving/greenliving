@@ -1,15 +1,27 @@
+import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
 import StatsBar from '../components/StatsBar'
+import { Factory, Recycle, Zap, Settings, Mountain, Construction, Atom, Shield, Flame, Hammer, Droplet, ArrowRight, Globe, ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function Home() {
+  const scrollRef = useRef(null)
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const { scrollLeft } = scrollRef.current
+      const scrollTo = direction === 'left' ? scrollLeft - 310 : scrollLeft + 310
+      scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' })
+    }
+  }
+
   const featuredSectors = [
-    { image: '/images/sec_nuclear.webp', title: 'Nuclear Energy', desc: 'Carbon products for nuclear reactors and energy infrastructure' },
-    { image: '/images/sec_defense.webp', title: 'Defense Sector', desc: 'Strategic materials for defense applications and manufacturing' },
-    { image: '/images/sec_steel.webp', title: 'Iron & Steel', desc: 'Essential carbon inputs for steelmaking processes' },
-    { image: '/images/sec_aluminium.webp', title: 'Aluminium Sector', desc: 'Carbon anodes and materials for aluminium smelting' },
-    { image: '/images/sec_foundry.webp', title: 'Foundry', desc: 'High-grade carbon for metal casting and foundry operations' },
-    { image: '/images/sec_water.webp', title: 'Water Filtration', desc: 'Activated carbon for water purification systems' },
+    { image: '/images/sec_nuclear.webp', title: 'Nuclear Energy', desc: 'Carbon products for nuclear reactors and energy infrastructure', icon: <Atom size={18} /> },
+    { image: '/images/sec_defense.webp', title: 'Defense Sector', desc: 'Strategic materials for defense applications and manufacturing', icon: <Shield size={18} /> },
+    { image: '/images/sec_steel.webp', title: 'Iron & Steel', desc: 'Essential carbon inputs for steelmaking processes', icon: <Flame size={18} /> },
+    { image: '/images/sec_aluminium.webp', title: 'Aluminum Sector', desc: 'Carbon anodes and materials for aluminum smelting', icon: <Hammer size={18} /> },
+    { image: '/images/sec_foundry.webp', title: 'Foundry', desc: 'High-grade carbon for metal casting and foundry operations', icon: <Factory size={18} /> },
+    { image: '/images/sec_water.webp', title: 'Water Filtration', desc: 'Activated carbon for water purification systems', icon: <Droplet size={18} /> },
   ]
 
   const featuredProducts = [
@@ -48,9 +60,10 @@ export default function Home() {
               <span className="section-label">Who We Are</span>
               <h2 className="section-title">India's Premier Strategic Carbon Solutions Provider</h2>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '16px' }}>
-                <strong style={{ color: 'var(--white)' }}>Greenliving Group</strong> is a leading supplier of high-quality carbon and coal-based products,
-                serving critical industries across India and international markets. With establishments in
-                <strong style={{ color: 'var(--white)' }}> 4 states</strong>, we deliver an unrivalled supply chain.
+                <strong style={{ color: 'var(--white)' }}>Greenliving Group</strong> is a leading supplier of high-quality carbon and
+                coal-based products, serving critical industries across India and international markets. With a
+                strong presence in 4 states, we deliver reliable solutions that power progress and build a
+                sustainable future.
               </p>
               <div className="about-highlight">
                 "We don't just supply carbon. We secure your supply chain."
@@ -61,23 +74,18 @@ export default function Home() {
             </div>
 
             <div className="reveal reveal-delay-3">
-              <div className="hex-grid">
+              <div className="about-features-grid">
                 {[
-                  { icon: '⚙️', label: 'Metallurgy' },
-                  { icon: '♻️', label: 'Recycling' },
-                  { icon: '⚡', label: 'Energy' },
-                  { icon: '🏭', label: 'Industrial Products' },
-                  { icon: '🔬', label: 'Niche Products' },
-                  { icon: '🧱', label: 'Other Carbon Products' },
+                  { icon: <Factory size={28} />, label: 'METALLURGY' },
+                  { icon: <Recycle size={28} />, label: 'RECYCLING' },
+                  { icon: <Zap size={28} />, label: 'ENERGY' },
+                  { icon: <Settings size={28} />, label: 'INDUSTRIAL PRODUCTS' },
+                  { icon: <Mountain size={28} />, label: 'ROCK PRODUCTS' },
+                  { icon: <Construction size={28} />, label: 'CONSTRUCTION PRODUCTS' },
                 ].map((item, i) => (
-                  <div className="hex-item" key={i}>
-                    <svg viewBox="0 0 120 138">
-                      <polygon points="60,1 118,35 118,103 60,137 2,103 2,35" />
-                    </svg>
-                    <div className="hex-content">
-                      <div className="hex-icon">{item.icon}</div>
-                      <div className="hex-label">{item.label}</div>
-                    </div>
+                  <div className="about-feature-card" key={i}>
+                    <div className="about-feature-icon">{item.icon}</div>
+                    <div className="about-feature-label">{item.label}</div>
                   </div>
                 ))}
               </div>
@@ -91,113 +99,149 @@ export default function Home() {
       {/* Featured Sectors */}
       <section className="section" style={{ background: 'var(--dark-900)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center' }}>
-            <span className="section-label reveal">Sector Experience</span>
-            <h2 className="section-title reveal reveal-delay-1">Industries We Empower</h2>
-            <p className="section-subtitle reveal reveal-delay-2" style={{ margin: '0 auto' }}>
-              Delivering mission-critical carbon solutions across India's most demanding industrial sectors
-            </p>
+          <div className="section-header-split">
+            <div className="reveal">
+              <span className="section-label">SECTOR EXPERTISE</span>
+              <h2 className="section-title" style={{ margin: 0 }}>Industries We Empower</h2>
+            </div>
+            <div className="reveal reveal-delay-1">
+              <p className="section-header-desc">
+                Delivering mission-critical carbon solutions across India's most demanding industrial sectors.
+              </p>
+            </div>
           </div>
 
-          <div className="sectors-grid" style={{ marginTop: '48px' }}>
+          <div className="sectors-grid" style={{ marginTop: '32px' }}>
             {featuredSectors.map((s, i) => (
-              <div className={`sector-card reveal reveal-delay-${Math.min(i + 1, 6)}`} key={i} style={{ padding: 0 }}>
-                <div className="sector-image" style={{ height: '200px', overflow: 'hidden' }}>
-                  <img src={s.image} alt={s.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-                <div style={{ padding: '24px' }}>
-                  <h3>{s.title}</h3>
+              <div className={`sector-overlay-card reveal reveal-delay-${Math.min(i + 1, 6)}`} key={i}>
+                <img src={s.image} alt={s.title} className="card-bg-img" />
+                <div className="card-overlay">
+                  <div className="card-header-row">
+                    <div className="card-icon-badge">
+                      {s.icon}
+                    </div>
+                    <h3>{s.title}</h3>
+                  </div>
                   <p>{s.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '40px' }} className="reveal">
-            <Link to="/sectors" className="btn-secondary" style={{ display: 'inline-flex' }}>
-              View All 9+ Sectors →
+          <div style={{ textAlign: 'center', marginTop: '48px' }} className="reveal">
+            <Link to="/sectors" className="btn-secondary" style={{ display: 'inline-flex', padding: '12px 32px' }}>
+              View All Sectors →
             </Link>
           </div>
         </div>
       </section>
 
       {/* Featured Products */}
-      <section className="section" style={{ background: 'var(--dark-800)' }}>
+      <section className="section" style={{ background: 'var(--dark-800)', position: 'relative' }}>
         <div className="container">
-          <div style={{ textAlign: 'center' }}>
-            <span className="section-label reveal">Our Products</span>
-            <h2 className="section-title reveal reveal-delay-1">What We Deal In</h2>
+          <div className="section-header-split align-center">
+            <div className="reveal">
+              <span className="section-label">OUR PRODUCTS</span>
+              <h2 className="section-title" style={{ margin: 0 }}>What We Deal In</h2>
+            </div>
+            <div className="reveal reveal-delay-1" style={{ display: 'flex', alignItems: 'center', gap: '24px', justifyContent: 'flex-end', flexWrap: 'wrap' }}>
+              <p style={{ color: 'var(--text-secondary)', margin: 0, fontSize: '1rem', maxWidth: '400px' }}>
+                High-quality carbon and coal-based products tailored to your industrial needs.
+              </p>
+              <Link to="/products" className="btn-outline-green" style={{ display: 'inline-flex' }}>
+                View All Products →
+              </Link>
+            </div>
           </div>
 
-          <div className="products-grid" style={{ marginTop: '40px' }}>
-            {featuredProducts.map((p, i) => (
-              <div className="product-card reveal" key={p.name} style={{ transitionDelay: `${i * 0.06}s` }}>
-                <div className="product-image" style={{ padding: 0, overflow: 'hidden' }}>
-                  <img src={p.image} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: p.filter }} />
-                </div>
-                <div className="product-info">
-                  <h3>{p.name}</h3>
-                  <span className="product-tag">{p.tag}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="carousel-container reveal" style={{ position: 'relative', marginTop: '40px' }}>
+            {/* Left Nav Button */}
+            <button className="carousel-nav-btn prev" onClick={() => scroll('left')} aria-label="Previous Products">
+              <ChevronLeft size={24} />
+            </button>
 
-          <div style={{ textAlign: 'center', marginTop: '40px' }} className="reveal">
-            <Link to="/products" className="btn-primary" style={{ display: 'inline-flex' }}>
-              View All 15+ Products →
-            </Link>
+            {/* Slider Row */}
+            <div className="product-slider-row" ref={scrollRef}>
+              {featuredProducts.map((p) => (
+                <div className="product-slider-card" key={p.name}>
+                  <div className="product-slider-image">
+                    <img src={p.image} alt={p.name} style={{ filter: p.filter }} />
+                  </div>
+                  <div className="product-slider-info">
+                    <h3>{p.name}</h3>
+                    <span className="product-slider-tag">{p.tag.toUpperCase()}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Right Nav Button */}
+            <button className="carousel-nav-btn next" onClick={() => scroll('right')} aria-label="Next Products">
+              <ChevronRight size={24} />
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Associates Marquee */}
+      {/* Associates Section */}
       <section className="section associates" style={{ background: 'var(--dark-900)' }}>
         <div className="container">
           <div className="associates-header" style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <span className="section-label reveal">Our Associates</span>
-            <h2 className="section-title reveal reveal-delay-1">Trusted By Industry Leaders</h2>
+            <span className="section-label reveal">OUR ASSOCIATES</span>
+            <h2 className="section-title reveal reveal-delay-1">
+              Trusted By <span className="green">Industry Leaders</span>
+            </h2>
           </div>
-        </div>
 
-        <div className="marquee-wrapper reveal reveal-delay-2">
-          <div className="marquee-track">
-            {doubled.map((item, i) => (
-              <div className="associate-item" key={i}>
-                <div className="associate-icon" style={item.image ? { background: 'transparent', boxShadow: 'none' } : {}}>
-                  {item.image ? (
-                    <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }} />
+          <div className="associates-grid-mockup reveal reveal-delay-2" style={{ marginTop: '40px' }}>
+            {associates.slice(0, 5).map((item, i) => (
+              <div className="associate-static-card" key={i}>
+                <div className="associate-logo-wrap">
+                  <img src={item.image} alt={item.name} />
+                </div>
+                <div className="associate-info-wrap">
+                  {item.name === 'DAE' ? (
+                    <>
+                      <div className="assoc-title">DAE</div>
+                      <div className="assoc-subtitle">Department of Atomic Energy</div>
+                    </>
                   ) : (
-                    item.icon
+                    <div className="assoc-title">{item.name}</div>
                   )}
                 </div>
-                <div className="associate-name">{item.name}</div>
               </div>
             ))}
           </div>
-        </div>
 
-        <div style={{ textAlign: 'center', marginTop: '40px' }} className="reveal">
-          <Link to="/associates" className="btn-primary" style={{ display: 'inline-flex' }}>
-            View All Partners →
-          </Link>
+          <div style={{ textAlign: 'center', marginTop: '48px' }} className="reveal">
+            <Link to="/associates" className="btn-outline-green" style={{ display: 'inline-flex' }}>
+              View All Partners →
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section">
-        <div className="container" style={{ textAlign: 'center' }}>
-          <h2 className="section-title reveal">Ready to Partner with Us?</h2>
-          <p className="section-subtitle reveal reveal-delay-1" style={{ margin: '0 auto 32px' }}>
-            Get in touch for competitive pricing on premium carbon products
-          </p>
-          <div className="hero-buttons reveal reveal-delay-2">
-            <Link to="/contact" className="btn-primary">
-              Request a Quote →
-            </Link>
-            <Link to="/global-presence" className="btn-secondary">
-              Our Global Reach
-            </Link>
+      <section className="cta-section-mockup">
+        <div className="container">
+          <div className="cta-grid-mockup">
+            <div className="cta-left reveal">
+              <div className="cta-hex-icon">
+                <Globe size={36} />
+              </div>
+              <div className="cta-text-wrap">
+                <h2>Ready to Partner with Us?</h2>
+                <p>Get in touch for competitive pricing on premium carbon products.</p>
+              </div>
+            </div>
+            <div className="cta-right reveal reveal-delay-1">
+              <Link to="/contact" className="btn-primary" style={{ padding: '14px 36px' }}>
+                Request a Quote →
+              </Link>
+              <Link to="/contact" className="cta-link-secondary">
+                Or Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Globe } from 'lucide-react'
+import { ArrowRight, Globe, Award, Package, Users, Handshake } from 'lucide-react'
 
 function CountUp({ end, suffix = '' }) {
   const [count, setCount] = useState(0)
@@ -143,16 +143,40 @@ export default function Hero() {
 
         <div className="hero-stats">
           <div className="hero-stat">
-            <div className="hero-stat-number"><CountUp end={13} suffix="+" /></div>
-            <div className="hero-stat-label">Years of Excellence</div>
+            <div className="stat-icon">
+              <Award size={32} />
+            </div>
+            <div className="hero-stat-info">
+              <div className="hero-stat-number"><CountUp end={13} suffix="+" /></div>
+              <div className="hero-stat-label">Years of Excellence</div>
+            </div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number"><CountUp end={500} suffix="K+" /></div>
-            <div className="hero-stat-label">MT Annual Volume</div>
+            <div className="stat-icon">
+              <Package size={32} />
+            </div>
+            <div className="hero-stat-info">
+              <div className="hero-stat-number"><CountUp end={500} suffix="K+" /></div>
+              <div className="hero-stat-label">MT Annual Volume</div>
+            </div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number"><CountUp end={200} suffix="+" /></div>
-            <div className="hero-stat-label">Active Clients</div>
+            <div className="stat-icon">
+              <Users size={32} />
+            </div>
+            <div className="hero-stat-info">
+              <div className="hero-stat-number"><CountUp end={200} suffix="+" /></div>
+              <div className="hero-stat-label">Active Clients</div>
+            </div>
+          </div>
+          <div className="hero-stat">
+            <div className="stat-icon">
+              <Handshake size={32} />
+            </div>
+            <div className="hero-stat-info">
+              <div className="hero-stat-number"><CountUp end={10} suffix="+" /></div>
+              <div className="hero-stat-label">Trusted Partners</div>
+            </div>
           </div>
         </div>
       </div>

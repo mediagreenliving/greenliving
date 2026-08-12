@@ -116,33 +116,38 @@ export default function AboutPage() {
       {/* Vision / Mission */}
       <section className="section" style={{ background: 'var(--dark-900)' }}>
         <div className="container">
-          <div className="vision-mission-grid">
+          <div className="vision-mission-rows">
+            {/* Vision Row */}
             <div className="reveal">
-              <div className="supply-chain-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                <div style={{ flex: 1 }}>
-                  <h4>Our Vision</h4>
-                  <p style={{ marginBottom: '20px' }}>
+              <div className="vm-row-card">
+                <div className="vm-animation" style={{ width: '180px', height: '180px' }}>
+                  <LottiePlayer animationPath="/images/Our Vision.json" style={{ width: '100%', height: '100%' }} />
+                </div>
+                <div className="vm-text">
+                  <span className="section-label" style={{ color: 'var(--green-200)', marginBottom: '8px', display: 'inline-block' }}>Our Vision</span>
+                  <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '12px' }}>Strategic Trust & Excellence</h3>
+                  <p style={{ color: 'rgba(255, 255, 255, 0.95)', fontSize: '1.05rem', lineHeight: '1.7' }}>
                     To be the most trusted and preferred strategic carbon solutions partner in India and across global
                     markets, driving industrial excellence through quality, reliability, and sustainable practices.
                   </p>
                 </div>
-                <div className="supply-icon" style={{ width: '120px', height: '120px', marginBottom: 0, marginTop: 'auto' }}>
-                  <LottiePlayer animationPath="/images/Our Vision.json" style={{ width: '100%', height: '100%' }} />
-                </div>
               </div>
             </div>
+
+            {/* Mission Row */}
             <div className="reveal reveal-delay-2">
-              <div className="supply-chain-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                <div className="supply-icon" style={{ width: '120px', height: '120px', marginBottom: '20px' }}>
-                  <LottiePlayer animationPath="/images/Mission.json" style={{ width: '100%', height: '100%' }} />
-                </div>
-                <div style={{ flex: 1 }}>
-                  <h4>Our Mission</h4>
-                  <p>
+              <div className="vm-row-card reverse">
+                <div className="vm-text">
+                  <span className="section-label" style={{ color: 'var(--green-200)', marginBottom: '8px', display: 'inline-block' }}>Our Mission</span>
+                  <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '12px' }}>Consistency & Supply Chain Security</h3>
+                  <p style={{ color: 'rgba(255, 255, 255, 0.95)', fontSize: '1.05rem', lineHeight: '1.7' }}>
                     To supply premium carbon and coal-based products with unmatched consistency, competitive pricing,
                     and an end-to-end logistics capability that secures our customers' supply chains across
                     every industrial sector we serve.
                   </p>
+                </div>
+                <div className="vm-animation" style={{ width: '180px', height: '180px' }}>
+                  <LottiePlayer animationPath="/images/Mission.json" style={{ width: '100%', height: '100%' }} />
                 </div>
               </div>
             </div>
