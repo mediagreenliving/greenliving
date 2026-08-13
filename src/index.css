@@ -5,55 +5,54 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Army Green Palette */
-  --green-50: #f4f7f2;
-  --green-100: #e9efe5;
-  --green-200: #c2d6b3;
-  --green-300: #9cbd81;
-  --green-400: #76a44f;
-  --green-500: #4a7a1a;
-  /* Primary Army Green */
-  --green-600: #3d6616;
-  --green-700: #2f4f0f;
-  --green-800: #1e3409;
-  --green-900: #0f1a04;
+  /* Logo Palette (Professional & Eye-Comforting) */
+  --green-50: #f1f9e8;
+  --green-100: #dff0cc;
+  --green-200: #c1e49e;
+  --green-300: #aedb57;
+  --green-400: #7ebf42; 
+  --green-500: #4a9a30;
+  --green-600: #357a20;
+  --green-700: #235d15;
+  --green-800: #154823;
+  --green-900: #0a2e12;
 
-  /* Accent — Army green for highlights/glows */
-  --accent: #5c8a1f;
-  --accent-light: #7dad3a;
-  --accent-glow: rgba(92, 138, 31, 0.2);
-  --accent-subtle: rgba(92, 138, 31, 0.08);
+  /* Accent — Logo green for highlights/glows */
+  --accent: #4a9a30;
+  --accent-light: #aedb57;
+  --accent-glow: rgba(74, 154, 48, 0.2);
+  --accent-subtle: rgba(74, 154, 48, 0.08);
 
   /* Gold accent for premium touches */
   --gold: #c9a84c;
   --gold-light: #e0c56e;
 
   /* Dark Theme Backgrounds & Text */
-  --bg-primary: #0a0f08;
-  --bg-secondary: #121c10;
-  --bg-tertiary: #1a2618;
+  --bg-primary: #0a0f0b;
+  --bg-secondary: #121a14;
+  --bg-tertiary: #19241b;
 
   --text-primary: #f4f7f2;
   --text-secondary: #c2d6b3;
   --text-muted: #8fa98a;
 
-  --border-color: #2f4f0f;
-  --border-light: #1e3409;
+  --border-color: #233325;
+  --border-light: #152417;
 
   /* Glass */
-  --glass-bg: rgba(10, 15, 8, 0.85);
-  --glass-border: rgba(92, 138, 31, 0.3);
-  --glass-hover: rgba(92, 138, 31, 0.15);
+  --glass-bg: rgba(10, 15, 11, 0.85);
+  --glass-border: rgba(74, 154, 48, 0.3);
+  --glass-hover: rgba(74, 154, 48, 0.15);
 
   /* Dark vars mapped appropriately */
-  --dark-950: #050804;
-  --dark-900: #0a0f08;
-  --dark-800: #121c10;
-  --dark-700: #152012;
-  --dark-600: #1a2618;
-  --dark-500: #2f4f0f;
-  --dark-400: #3d6616;
-  --dark-300: #c2d6b3;
+  --dark-950: #050805;
+  --dark-900: #0a0f0b;
+  --dark-800: #121a14;
+  --dark-700: #19241b;
+  --dark-600: #233325;
+  --dark-500: #154823;
+  --dark-400: #357a20;
+  --dark-300: #aedb57;
   --white: #ffffff;
   /* Actual white now */
   --text-secondary: #c2d6b3;
