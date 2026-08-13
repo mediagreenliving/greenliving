@@ -170,16 +170,16 @@ ul {
   z-index: 1000;
   padding: 12px 0;
   transition: var(--transition-smooth);
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--glass-bg);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid var(--glass-border);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
 }
 
 .navbar.scrolled {
   padding: 8px 0;
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--bg-primary);
   box-shadow: 0 10px 30px rgba(74, 122, 26, 0.1);
 }
 
@@ -635,7 +635,7 @@ ul {
   margin-top: 24px;
   font-style: italic;
   font-weight: 600;
-  color: var(--green-700);
+  color: var(--green-200);
   font-size: 1.05rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
@@ -986,7 +986,7 @@ ul {
 }
 
 .sector-card:hover .sector-icon, .associate-detail-card:hover .associate-detail-icon {
-  background: var(--green-50);
+  background: var(--bg-tertiary);
   border-color: var(--green-300);
 }
 
@@ -1028,11 +1028,11 @@ ul {
 .product-tag {
   display: inline-block;
   padding: 4px 12px;
-  background: var(--green-50);
+  background: var(--bg-tertiary);
   border: 1px solid var(--green-200);
   border-radius: 100px;
   font-size: 0.75rem;
-  color: var(--green-700);
+  color: var(--green-200);
   font-weight: 700;
   margin-top: 12px;
   text-transform: uppercase;
@@ -1158,7 +1158,7 @@ ul {
 }
 
 .associate-item:hover .associate-icon {
-  background: var(--green-50);
+  background: var(--bg-tertiary);
   border-color: var(--green-300);
 }
 
@@ -1412,7 +1412,7 @@ ul {
 }
 
 .contact-info-item:hover .contact-icon {
-  background: var(--green-50);
+  background: var(--bg-tertiary);
   border-color: var(--green-300);
 }
 
@@ -1580,7 +1580,7 @@ ul {
 }
 
 .back-to-top:hover {
-  background: var(--green-50);
+  background: var(--bg-tertiary);
   border-color: var(--green-500);
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(74, 122, 26, 0.15);
@@ -1689,8 +1689,8 @@ ul {
 .timeline-year {
   display: inline-block;
   padding: 4px 12px;
-  background: var(--green-50);
-  color: var(--green-700);
+  background: var(--bg-tertiary);
+  color: var(--green-200);
   border-radius: 100px;
   font-size: 0.8rem;
   font-weight: 700;
