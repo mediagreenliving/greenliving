@@ -1129,8 +1129,10 @@ ul {
   width: max-content;
 }
 
-.marquee-track:hover {
-  animation-play-state: paused;
+@media (hover: hover) {
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
 }
 
 .associate-item {
@@ -1874,14 +1876,14 @@ ul {
   }
 
   .associate-item {
-    min-width: 160px;
-    padding: 12px 16px;
+    min-width: 120px;
+    padding: 8px 12px;
   }
 
   .associate-icon {
-    width: 140px;
-    height: 60px;
-    font-size: 1.5rem;
+    width: 100px;
+    height: 48px;
+    font-size: 1.2rem;
   }
 
   .navbar {
