@@ -293,7 +293,7 @@ ul {
 
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
-  background: #ffffff;
+  background: var(--text-primary);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -302,7 +302,7 @@ ul {
 
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
-  background: #ffffff;
+  background: var(--text-primary);
 }
 
 /* ---------- PAGE HERO (Inner Pages) ---------- */
@@ -647,7 +647,7 @@ ul {
 }
 
 .about-feature-card {
-  background: #fff;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 24px 16px;
@@ -836,7 +836,7 @@ ul {
 
 .product-slider-card {
   flex: 0 0 280px;
-  background: #fff;
+  background: var(--bg-secondary);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
@@ -854,7 +854,7 @@ ul {
 }
 
 .product-slider-image {
-  background: #fff;
+  background: var(--bg-secondary);
   height: 220px;
   padding: 24px;
   display: flex;
@@ -877,7 +877,7 @@ ul {
 
 .product-slider-info {
   padding: 20px 24px;
-  background: #fff;
+  background: var(--bg-secondary);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -910,7 +910,7 @@ ul {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   color: var(--green-600);
   display: flex;
@@ -938,7 +938,7 @@ ul {
 }
 
 .sector-card, .product-card, .associate-item, .presence-card, .cert-badge, .state-card, .contact-info-item, .associate-detail-card {
-  background: #fff;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 32px 28px;
@@ -1049,7 +1049,7 @@ ul {
 
 .filter-btn {
   padding: 10px 24px;
-  background: #fff;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 100px;
   color: var(--text-secondary);
@@ -1225,7 +1225,7 @@ ul {
 .global-map {
   position: relative;
   padding: 32px;
-  background: #fff;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   box-shadow: 0 4px 20px rgba(0,0,0,0.03);
@@ -1244,7 +1244,7 @@ ul {
 
 .region-tag {
   padding: 10px 20px;
-  background: #fff;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 100px;
   font-size: 0.9rem;
@@ -1424,7 +1424,7 @@ ul {
 
 /* Contact Form */
 .contact-form {
-  background: #fff;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 40px;
@@ -1459,7 +1459,7 @@ ul {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  background: #fff;
+  background: var(--bg-secondary);
   border-color: var(--green-500);
   box-shadow: 0 0 0 4px rgba(74, 122, 26, 0.1);
 }
@@ -1566,7 +1566,7 @@ ul {
 .back-to-top {
   width: 48px;
   height: 48px;
-  background: #fff;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   display: flex;
@@ -1664,7 +1664,7 @@ ul {
 
 .timeline-item:hover .timeline-marker {
   border-color: var(--green-400);
-  background: #fff;
+  background: var(--bg-secondary);
 }
 
 .timeline-item:hover .timeline-dot {
@@ -1672,7 +1672,7 @@ ul {
 }
 
 .timeline-content {
-  background: #fff;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 24px 32px;
@@ -1761,7 +1761,7 @@ ul {
 
 .sector-product-tags .product-tag {
   margin-top: 0;
-  background: #fff;
+  background: var(--bg-secondary);
   border-color: var(--border-color);
   color: var(--text-secondary);
 }
