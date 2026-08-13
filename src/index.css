@@ -1166,13 +1166,13 @@ ul {
 
 .associate-icon img,
 .associate-detail-icon img {
-  filter: brightness(0) opacity(0.75);
+  opacity: 0.85;
   transition: var(--transition-smooth);
 }
 
 .associate-item:hover .associate-icon img,
 .associate-detail-card:hover .associate-detail-icon img {
-  filter: brightness(0) opacity(1);
+  opacity: 1;
 }
 
 .associate-name {
