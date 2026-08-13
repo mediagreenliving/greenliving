@@ -2214,6 +2214,10 @@ ul {
     --section-padding: 40px 0;
   }
   
+  .about-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -2451,6 +2455,10 @@ ul {
 }
 
 @media (max-width: 480px) {
+  .about-features-grid {
+    grid-template-columns: 1fr;
+  }
+  
   .states-grid {
     grid-template-columns: 1fr;
   }
