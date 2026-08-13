@@ -40,7 +40,7 @@ export default function Compliance() {
               <h4>Dedicated & Certified Captive Logistics Wing</h4>
               <p>
                 We operate our own certified logistics fleet, ensuring end-to-end control over
-                the supply chain — from sourcing and quality control to last-mile delivery. Our
+                the supply chain - from sourcing and quality control to last-mile delivery. Our
                 captive logistics capability sets us apart from competitors who rely on third-party
                 transporters.
               </p>

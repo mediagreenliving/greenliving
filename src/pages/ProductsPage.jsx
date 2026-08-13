@@ -13,12 +13,12 @@ const allProducts = [
   { name: 'Carbon Anode', category: 'carbon', image: '/images/prod_anode.webp', filter: 'none', desc: 'Pre-baked carbon anodes for the Hall-Héroult process in aluminium smelting. Critical for electrolysis efficiency.' },
   { name: 'Carbon Blocks', category: 'carbon', image: '/images/prod_anode.webp', filter: 'brightness(0.9)', desc: 'Dense, high-strength carbon blocks for blast furnace hearth lining, providing thermal and chemical resistance.' },
   
-  { name: 'CPC', category: 'coke', image: '/images/prod_coke.webp', filter: 'none', desc: 'Calcined Petroleum Coke — a premium carbon source for anode manufacturing in the aluminium industry.' },
+  { name: 'CPC', category: 'coke', image: '/images/prod_coke.webp', filter: 'none', desc: 'Calcined Petroleum Coke - a premium carbon source for anode manufacturing in the aluminium industry.' },
   { name: 'Met Coke', category: 'coke', image: '/images/prod_coke.webp', filter: 'brightness(1.1)', desc: 'Metallurgical coke for blast furnace operations, providing fuel and structural support during iron smelting.' },
   { name: 'Coke Fines', category: 'coke', image: '/images/prod_coke.webp', filter: 'contrast(1.1)', desc: 'Fine-grade coke particles used as fuel in sintering plants, cement kilns, and various industrial processes.' },
   { name: 'Pet Coke', category: 'coke', image: '/images/prod_coke.webp', filter: 'brightness(0.95)', desc: 'Petroleum coke for cement, power, and steel industries. Available in fuel-grade and anode-grade specifications.' },
   
-  { name: 'Tyre Carbon', category: 'specialty', image: '/images/prod_carbon.webp', filter: 'none', desc: 'Recovered carbon black from tyre pyrolysis — a sustainable, cost-effective carbon source for various applications.' },
+  { name: 'Tyre Carbon', category: 'specialty', image: '/images/prod_carbon.webp', filter: 'none', desc: 'Recovered carbon black from tyre pyrolysis - a sustainable, cost-effective carbon source for various applications.' },
   { name: 'Dolochar', category: 'specialty', image: '/images/prod_coke.webp', filter: 'brightness(1.2)', desc: 'By-product from sponge iron production, used as fuel in power plants and cement industry.' },
 ]
 

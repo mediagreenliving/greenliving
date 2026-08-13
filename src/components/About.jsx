@@ -18,7 +18,7 @@ export default function About() {
             <p>
               <strong>Greenliving Group</strong> is a leading supplier of high-quality carbon and coal-based products,
               serving critical industries across India and international markets. With establishments in
-              <strong> 4 states</strong> — Andhra Pradesh, Chhattisgarh, Odisha, and Jharkhand — we have built
+              <strong> 4 states</strong> - Andhra Pradesh, Chhattisgarh, Odisha, and Jharkhand - we have built
               an unrivalled supply chain that ensures consistent quality and timely delivery.
             </p>
             <p>

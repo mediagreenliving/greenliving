@@ -2,15 +2,15 @@ import PageHero from '../components/PageHero'
 
 export default function AssociatesPage() {
   const associates = [
-    { name: 'Indian Navy', type: 'Defense — Government of India', image: '/images/Associates/indian navy logo.webp', desc: 'Supplying strategic carbon materials for naval defense infrastructure and vessel manufacturing.' },
+    { name: 'Indian Navy', type: 'Defense - Government of India', image: '/images/Associates/indian navy logo.webp', desc: 'Supplying strategic carbon materials for naval defense infrastructure and vessel manufacturing.' },
     { name: 'Government of India', type: 'Government', image: '/images/Associates/Government of India.svg', desc: 'Recognized and certified supplier under various government departments and public sector enterprises.' },
-    { name: 'Department of Atomic Energy (DAE)', type: 'Nuclear — Government of India', image: '/images/Associates/Department of Atomic Energy (DAE).webp', desc: 'Providing high-purity carbon and graphite products for India\'s nuclear energy programme.' },
-    { name: 'Indian Oil Corporation', type: 'Energy — Maharatna PSU', image: '/images/Associates/indian oil logo.svg', desc: 'Partnering with India\'s largest oil company for petroleum coke and carbon supply.' },
-    { name: 'NALCO', type: 'Aluminium — Navratna PSU', image: '/images/Associates/nalco logo.svg', desc: 'Supplying CPC, carbon anodes, and carbon paste for aluminium smelting operations at NALCO.' },
+    { name: 'Department of Atomic Energy (DAE)', type: 'Nuclear - Government of India', image: '/images/Associates/Department of Atomic Energy (DAE).webp', desc: 'Providing high-purity carbon and graphite products for India\'s nuclear energy programme.' },
+    { name: 'Indian Oil Corporation', type: 'Energy - Maharatna PSU', image: '/images/Associates/indian oil logo.svg', desc: 'Partnering with India\'s largest oil company for petroleum coke and carbon supply.' },
+    { name: 'NALCO', type: 'Aluminium - Navratna PSU', image: '/images/Associates/nalco logo.svg', desc: 'Supplying CPC, carbon anodes, and carbon paste for aluminium smelting operations at NALCO.' },
     { name: 'TATA Group', type: 'Conglomerate', image: '/images/Associates/tata logo.svg', desc: 'Trusted carbon solutions partner across multiple TATA group companies in steel and metals.' },
-    { name: 'Hindalco Industries', type: 'Metals & Mining — Aditya Birla Group', image: '/images/Associates/hindalco logo.webp', desc: 'Premium carbon anode and CPC supply for one of India\'s largest aluminium producers.' },
+    { name: 'Hindalco Industries', type: 'Metals & Mining - Aditya Birla Group', image: '/images/Associates/hindalco logo.webp', desc: 'Premium carbon anode and CPC supply for one of India\'s largest aluminium producers.' },
     { name: 'Vedanta Limited', type: 'Natural Resources', image: '/images/Associates/vedanta-logo.svg', desc: 'Supplying carbon products for Vedanta\'s aluminium and zinc smelting operations across India.' },
-    { name: 'BALCO', type: 'Aluminium — Vedanta Group', image: '/images/Our Compliances/BALCO_Logo.webp', desc: 'Dedicated carbon supply partnership for Bharat Aluminium Company\'s smelter operations.' },
+    { name: 'BALCO', type: 'Aluminium - Vedanta Group', image: '/images/Our Compliances/BALCO_Logo.webp', desc: 'Dedicated carbon supply partnership for Bharat Aluminium Company\'s smelter operations.' },
   ]
 
   const certifications = [
@@ -98,7 +98,7 @@ export default function AssociatesPage() {
                 <h4>Dedicated & Certified Captive Logistics Wing</h4>
                 <p>
                   We operate our own certified logistics fleet, ensuring end-to-end control over
-                  the supply chain — from sourcing and quality control to last-mile delivery.
+                  the supply chain - from sourcing and quality control to last-mile delivery.
                 </p>
                 <div className="supply-quote">
                   "We don't just supply carbon. We secure your supply chain."
