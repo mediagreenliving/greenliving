@@ -177,6 +177,7 @@ ul {
   right: 0;
   z-index: 1000;
   padding: 12px 0;
+  min-height: 96px; /* Reserve space for logo to prevent CLS */
   transition: var(--transition-smooth);
   background: var(--glass-bg);
   backdrop-filter: blur(16px) saturate(180%);
@@ -2227,10 +2228,12 @@ ul {
 
   .navbar {
     padding: 12px 0;
+    min-height: 88px; /* max-height 64px + 24px padding */
   }
 
   .navbar.scrolled {
     padding: 8px 0;
+    min-height: 80px;
   }
 
   .nav-logo {
