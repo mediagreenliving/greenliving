@@ -60,22 +60,17 @@ export default function SectorsPage() {
 
       <section className="section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="container">
-          <div className="sectors-detail-grid">
+          <div className="sectors-bento-grid">
             {sectors.map((sector, i) => (
-              <div className={`sector-detail-card reveal reveal-delay-${(i % 3) + 1}`} key={i} style={{ padding: 0 }}>
-                <div className="sector-image" style={{ height: '300px', overflow: 'hidden' }}>
-                  <img src={sector.image} alt={sector.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-                <div style={{ padding: '32px' }}>
-                  <div className="sector-detail-header">
-                    <h3 style={{ margin: 0, fontSize: '1.6rem' }}>{sector.title}</h3>
-                  </div>
-                  <p className="sector-detail-desc">{sector.desc}</p>
-                  <div className="sector-products">
-                    <span className="sector-products-label">Key Products:</span>
-                    <div className="sector-product-tags">
+              <div className={`bento-card reveal reveal-delay-${(i % 3) + 1}`} key={i}>
+                <img src={sector.image} alt={sector.title} className="bento-bg" />
+                <div className="bento-overlay">
+                  <div className="bento-content">
+                    <h3 className="bento-title">{sector.title}</h3>
+                    <p className="bento-desc">{sector.desc}</p>
+                    <div className="bento-tags">
                       {sector.keyProducts.map((p, j) => (
-                        <span className="product-tag" key={j}>{p}</span>
+                        <span className="bento-tag" key={j}>{p}</span>
                       ))}
                     </div>
                   </div>

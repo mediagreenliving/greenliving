@@ -1,5 +1,6 @@
 import PageHero from '../components/PageHero'
-
+import Lottie from 'lottie-react'
+import logisticAnimation from '../assets/logistic.json'
 export default function AssociatesPage() {
   const associates = [
     { name: 'Indian Navy', type: 'Defense - Government of India', image: '/images/Associates/indian navy logo.webp', desc: 'Supplying strategic carbon materials for naval defense infrastructure and vessel manufacturing.' },
@@ -39,20 +40,20 @@ export default function AssociatesPage() {
             <h2 className="section-title reveal reveal-delay-1">Who We Work With</h2>
           </div>
 
-          <div className="associates-detail-grid">
+          <div className="premium-associate-grid">
             {associates.map((item, i) => (
-              <div className={`associate-detail-card reveal reveal-delay-${(i % 3) + 1}`} key={i}>
-                <div className="associate-detail-icon" style={item.image ? { background: 'transparent', boxShadow: 'none', padding: '0' } : {}}>
+              <div className={`premium-associate-card reveal reveal-delay-${(i % 3) + 1}`} key={i}>
+                <div className="premium-associate-icon-wrapper">
                   {item.image ? (
-                    <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                    <img src={item.image} alt={item.name} />
                   ) : (
                     item.icon
                   )}
                 </div>
-                <div className="associate-detail-info">
-                  <h3>{item.name}</h3>
-                  <span className="associate-detail-type">{item.type}</span>
-                  <p>{item.desc}</p>
+                <div className="premium-associate-content">
+                  <h3 className="premium-associate-title">{item.name}</h3>
+                  <span className="premium-associate-type">{item.type}</span>
+                  <p className="premium-associate-desc">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -79,7 +80,7 @@ export default function AssociatesPage() {
               <div className="cert-grid">
                 {certifications.map((cert, i) => (
                   <div className="cert-badge" key={i}>
-                    <div className="cert-icon" style={cert.image ? { background: 'transparent', boxShadow: 'none' } : {}}>
+                    <div className="cert-icon">
                       {cert.image ? <img src={cert.image} alt={cert.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} /> : cert.icon}
                     </div>
                     <div className="cert-name">{cert.name}</div>
@@ -94,15 +95,20 @@ export default function AssociatesPage() {
                 🚚 Our Supply Chain
               </h3>
               <div className="supply-chain-card">
-                <div className="supply-icon">🚛</div>
-                <h4>Dedicated & Certified Captive Logistics Wing</h4>
-                <p>
-                  We operate our own certified logistics fleet, ensuring end-to-end control over
-                  the supply chain - from sourcing and quality control to last-mile delivery.
-                </p>
-                <div className="supply-quote">
-                  "We don't just supply carbon. We secure your supply chain."
+                <div className="supply-content">
+                  <div className="supply-icon" style={{ width: '160px', height: '160px', marginBottom: '16px', background: 'transparent' }}>
+                    <Lottie animationData={logisticAnimation} loop={true} />
+                  </div>
+                  <h4>Dedicated & Certified Captive Logistics Wing</h4>
+                  <p>
+                    We operate our own certified logistics fleet, ensuring end-to-end control over
+                    the supply chain - from sourcing and quality control to last-mile delivery.
+                  </p>
+                  <div className="supply-quote">
+                    "We don't just supply carbon. We secure your supply chain."
+                  </div>
                 </div>
+                <div className="supply-visual"></div>
               </div>
             </div>
           </div>

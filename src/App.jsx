@@ -18,6 +18,40 @@ function ScrollToTop() {
   return null
 }
 
+import React from 'react'
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null, errorInfo: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    this.setState({ error, errorInfo });
+    console.error("Caught by Error Boundary:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ padding: '20px', color: 'red', background: '#fff', height: '100vh', overflow: 'auto' }}>
+          <h2>Something went wrong.</h2>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
+            {this.state.error && this.state.error.toString()}
+            <br />
+            {this.state.errorInfo && this.state.errorInfo.componentStack}
+          </details>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 function App() {
   // Scroll reveal observer
   useEffect(() => {
@@ -55,20 +89,22 @@ function App() {
   }, [])
 
   return (
-    <Router>
-      <ScrollToTop />
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/sectors" element={<SectorsPage />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/associates" element={<AssociatesPage />} />
-          <Route path="/global-presence" element={<GlobalPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <ScrollToTop />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/sectors" element={<SectorsPage />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/associates" element={<AssociatesPage />} />
+            <Route path="/global-presence" element={<GlobalPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </ErrorBoundary>
   )
 }
 

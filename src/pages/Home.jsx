@@ -193,24 +193,26 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="associates-grid-mockup reveal reveal-delay-2" style={{ marginTop: '40px' }}>
-            {associates.slice(0, 5).map((item, i) => (
-              <div className="associate-static-card" key={i}>
-                <div className="associate-logo-wrap">
-                  <img src={item.image} alt={item.name} />
+          <div className="marquee-wrapper reveal reveal-delay-2" style={{ marginTop: '40px' }}>
+            <div className="marquee-track">
+              {doubled.map((item, i) => (
+                <div className="associate-item" key={i}>
+                  <div className="associate-icon">
+                    <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  </div>
+                  <div>
+                    {item.name === 'DAE' ? (
+                      <>
+                        <div className="associate-name">DAE</div>
+                        <div className="associate-type">Department of Atomic Energy</div>
+                      </>
+                    ) : (
+                      <div className="associate-name">{item.name}</div>
+                    )}
+                  </div>
                 </div>
-                <div className="associate-info-wrap">
-                  {item.name === 'DAE' ? (
-                    <>
-                      <div className="assoc-title">DAE</div>
-                      <div className="assoc-subtitle">Department of Atomic Energy</div>
-                    </>
-                  ) : (
-                    <div className="assoc-title">{item.name}</div>
-                  )}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '48px' }} className="reveal">
