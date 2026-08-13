@@ -83,6 +83,11 @@ html {
   overflow-x: hidden;
 }
 
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--bg-primary);
@@ -2447,6 +2452,10 @@ ul {
 
 @media (max-width: 480px) {
   .states-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
     grid-template-columns: 1fr;
   }
 
