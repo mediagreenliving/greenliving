@@ -62,26 +62,26 @@ export default function AboutPage() {
       />
 
       {/* Story Section */}
-      <section className="section" style={{ background: 'var(--dark-800)' }}>
+      <section className="section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="container">
           <div className="about-grid">
             <div className="reveal">
               <span className="section-label">Our Story</span>
               <h2 className="section-title">Building India's Carbon Future</h2>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '20px' }}>
-                <strong style={{ color: 'var(--white)' }}>Greenliving Group</strong> was established with a clear mission:
+                <strong style={{ color: 'var(--text-primary)' }}>Greenliving Group</strong> was established with a clear mission:
                 to become India's most trusted partner for strategic carbon solutions. From our inception,
                 we recognized the critical role that carbon plays across India's industrial landscape - from
                 powering nuclear reactors to enabling aluminium smelting.
               </p>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '20px' }}>
-                Today, we operate across <strong style={{ color: 'var(--white)' }}>4 states</strong> - Andhra Pradesh,
+                Today, we operate across <strong style={{ color: 'var(--text-primary)' }}>4 states</strong> - Andhra Pradesh,
                 Chhattisgarh, Odisha, and Jharkhand - with a comprehensive portfolio of
-                <strong style={{ color: 'var(--white)' }}> 15+ carbon and coal-based products</strong>. Our reach extends
+                <strong style={{ color: 'var(--text-primary)' }}> 15+ carbon and coal-based products</strong>. Our reach extends
                 beyond India's borders into Russia, China, South East Asia, and the MENA region.
               </p>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.8' }}>
-                What sets us apart is our <strong style={{ color: 'var(--white)' }}>captive logistics wing</strong> - a
+                What sets us apart is our <strong style={{ color: 'var(--text-primary)' }}>captive logistics wing</strong> - a
                 dedicated fleet that gives us end-to-end control over the supply chain, from sourcing to
                 last-mile delivery. This isn't just about supplying carbon; it's about securing your supply chain.
               </p>
@@ -114,7 +114,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision / Mission */}
-      <section className="section" style={{ background: 'var(--dark-900)' }}>
+      <section className="section" style={{ background: 'var(--bg-primary)' }}>
         <div className="container">
           <div className="vision-mission-rows">
             {/* Vision Row */}
@@ -156,7 +156,7 @@ export default function AboutPage() {
       </section>
 
       {/* Journey Timeline */}
-      <section className="section" style={{ background: 'var(--dark-800)' }}>
+      <section className="section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="container">
           <div style={{ textAlign: 'center' }}>
             <span className="section-label reveal">Our Journey</span>
@@ -181,7 +181,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="section" style={{ background: 'var(--dark-900)' }}>
+      <section className="section" style={{ background: 'var(--bg-primary)' }}>
         <div className="container">
           <div style={{ textAlign: 'center' }}>
             <span className="section-label reveal">Core Values</span>

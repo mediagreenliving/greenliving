@@ -58,7 +58,7 @@ export default function SectorsPage() {
         bgImage="/images/sec_defense.webp"
       />
 
-      <section className="section" style={{ background: 'var(--dark-800)' }}>
+      <section className="section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="container">
           <div className="sectors-detail-grid">
             {sectors.map((sector, i) => (

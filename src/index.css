@@ -2144,6 +2144,10 @@ ul {
   background-color: #25D366;
 }
 
+.fab-whatsapp img {
+  filter: brightness(0) invert(1);
+}
+
 .fab-whatsapp:hover {
   background-color: #128C7E;
   transform: translateY(-4px) scale(1.05);

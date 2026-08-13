@@ -53,14 +53,14 @@ export default function Home() {
       <Hero />
 
       {/* About Preview */}
-      <section className="section" style={{ background: 'var(--dark-800)' }}>
+      <section className="section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="container">
           <div className="about-grid">
             <div className="reveal">
               <span className="section-label">Who We Are</span>
               <h2 className="section-title">India's Premier Strategic Carbon Solutions Provider</h2>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '16px' }}>
-                <strong style={{ color: 'var(--white)' }}>Greenliving Group</strong> is a leading supplier of high-quality carbon and
+                <strong style={{ color: 'var(--text-primary)' }}>Greenliving Group</strong> is a leading supplier of high-quality carbon and
                 coal-based products, serving critical industries across India and international markets. With a
                 strong presence in 4 states, we deliver reliable solutions that power progress and build a
                 sustainable future.
@@ -97,7 +97,7 @@ export default function Home() {
       <StatsBar />
 
       {/* Featured Sectors */}
-      <section className="section" style={{ background: 'var(--dark-900)' }}>
+      <section className="section" style={{ background: 'var(--bg-primary)' }}>
         <div className="container">
           <div className="section-header-split">
             <div className="reveal">
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* Featured Products */}
-      <section className="section" style={{ background: 'var(--dark-800)', position: 'relative' }}>
+      <section className="section" style={{ background: 'var(--bg-secondary)', position: 'relative' }}>
         <div className="container">
           <div className="section-header-split align-center">
             <div className="reveal">
@@ -184,7 +184,7 @@ export default function Home() {
       </section>
 
       {/* Associates Section */}
-      <section className="section associates" style={{ background: 'var(--dark-900)' }}>
+      <section className="section associates" style={{ background: 'var(--bg-primary)' }}>
         <div className="container">
           <div className="associates-header" style={{ textAlign: 'center', marginBottom: '40px' }}>
             <span className="section-label reveal">OUR ASSOCIATES</span>
