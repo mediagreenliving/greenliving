@@ -5,23 +5,31 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Logo Palette (Professional & Eye-Comforting) */
-  --green-50: #f1f9e8;
-  --green-100: #dff0cc;
-  --green-200: #c1e49e;
-  --green-300: #aedb57;
-  --green-400: #7ebf42; 
-  --green-500: #39FF14;
-  --green-600: #357a20;
-  --green-700: #235d15;
-  --green-800: #154823;
-  --green-900: #0a2e12;
+  /* Custom Palette from Image */
+  --olive: #808000;
+  --mehendi: #4f7942;
+  --bottle-green: #006a4e;
+  --forest-green: #228b22;
+  --jade-green: #00a86b;
+  --emerald-green: #009b77;
 
-  /* Accent — Logo green for highlights/glows */
-  --accent: #39FF14;
-  --accent-light: #aedb57;
-  --accent-glow: rgba(57, 255, 20, 0.2);
-  --accent-subtle: rgba(57, 255, 20, 0.08);
+  /* Logo Palette (Professional & Eye-Comforting) */
+  --green-50: #f4fbf7;
+  --green-100: #e2f5ec;
+  --green-200: #c2e9d7;
+  --green-300: var(--jade-green);     /* L: 66% - Lightest */
+  --green-400: var(--emerald-green);  /* L: 61% */
+  --green-500: var(--forest-green);   /* L: 55% */
+  --green-600: var(--olive);          /* L: 50% */
+  --green-700: var(--mehendi);        /* L: 45% */
+  --green-800: var(--bottle-green);   /* L: 38% - Darkest */
+  --green-900: #004d38;
+
+  /* Accent — Premium Emerald for a professional modern look */
+  --accent: var(--emerald-green);
+  --accent-light: var(--jade-green);
+  --accent-glow: rgba(0, 155, 119, 0.2);
+  --accent-subtle: rgba(0, 155, 119, 0.08);
 
   /* Gold accent for premium touches */
   --gold: #c9a84c;
