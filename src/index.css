@@ -11,17 +11,17 @@
   --green-200: #c1e49e;
   --green-300: #aedb57;
   --green-400: #7ebf42; 
-  --green-500: #4a9a30;
+  --green-500: #39FF14;
   --green-600: #357a20;
   --green-700: #235d15;
   --green-800: #154823;
   --green-900: #0a2e12;
 
   /* Accent — Logo green for highlights/glows */
-  --accent: #4a9a30;
+  --accent: #39FF14;
   --accent-light: #aedb57;
-  --accent-glow: rgba(74, 154, 48, 0.2);
-  --accent-subtle: rgba(74, 154, 48, 0.08);
+  --accent-glow: rgba(57, 255, 20, 0.2);
+  --accent-subtle: rgba(57, 255, 20, 0.08);
 
   /* Gold accent for premium touches */
   --gold: #c9a84c;
