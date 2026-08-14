@@ -27,7 +27,36 @@
   --gold: #c9a84c;
   --gold-light: #e0c56e;
 
-  /* Light Theme Backgrounds & Text */
+  /* Dark Theme Backgrounds & Text */
+  --bg-primary: #0a0f0b;
+  --bg-secondary: #121a14;
+  --bg-tertiary: #19241b;
+
+  --text-primary: #ffffff;
+  --text-secondary: #c2d6b3; /* softened for better readability */
+  --text-muted: #8fa98a;
+
+  --border-color: #233325;
+  --border-light: #154823;
+
+  /* Glass */
+  --glass-bg: rgba(18, 26, 20, 0.4);
+  --glass-border: rgba(0, 168, 107, 0.2);
+  --glass-hover: rgba(0, 168, 107, 0.4);
+
+  /* Dark vars explicitly defined */
+  --dark-950: #050805;
+  --dark-900: #0a0f0b;
+  --dark-800: #121a14;
+  --dark-700: #19241b;
+  --dark-600: #233325;
+  --dark-500: #154823;
+  --dark-400: #357a20;
+  --dark-300: #aedb57;
+  --white: #ffffff;
+}
+
+.light-section {
   --bg-primary: #ffffff;
   --bg-secondary: #f9fafb;
   --bg-tertiary: #f3f4f6;
@@ -39,24 +68,12 @@
   --border-color: #e5e7eb;
   --border-light: #f3f4f6;
 
-  /* Glass */
   --glass-bg: rgba(255, 255, 255, 0.85);
   --glass-border: rgba(0, 168, 107, 0.3);
   --glass-hover: rgba(0, 168, 107, 0.15);
+}
 
-  /* Dark vars mapped appropriately (keep these for elements we want dark) */
-  --dark-950: #050805;
-  --dark-900: #0a0f0b;
-  --dark-800: #121a14;
-  --dark-700: #19241b;
-  --dark-600: #233325;
-  --dark-500: #154823;
-  --dark-400: #357a20;
-  --dark-300: #aedb57;
-  --white: #ffffff;
-  /* Actual white now */
-  --text-secondary: #4b5563;
-
+:root {
   /* Spacing */
   --section-padding: 100px 0;
   --container-width: 1200px;

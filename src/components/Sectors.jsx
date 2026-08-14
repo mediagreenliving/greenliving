@@ -12,7 +12,7 @@ export default function Sectors() {
   ]
 
   return (
-    <section className="section sectors" id="sectors" style={{ background: '#ffffff' }}>
+    <section className="section sectors" id="sectors">
       <div className="container">
         <div style={{ textAlign: 'center' }}>
           <span className="section-label reveal">Sector Experience</span>

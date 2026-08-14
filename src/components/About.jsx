@@ -9,7 +9,7 @@ export default function About() {
   ]
 
   return (
-    <section className="section about" id="about" style={{ background: '#ffffff' }}>
+    <section className="section about light-section" id="about">
       <div className="container">
         <div className="about-grid">
           <div className="about-text reveal">

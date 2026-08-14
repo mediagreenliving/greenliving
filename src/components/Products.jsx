@@ -33,7 +33,7 @@ export default function Products() {
     : allProducts.filter(p => p.category === activeFilter)
 
   return (
-    <section className="section products" id="products" style={{ background: '#f9fafb' }}>
+    <section className="section products light-section" id="products">
       <div className="container">
         <div style={{ textAlign: 'center' }}>
           <span className="section-label reveal">What We Deal In</span>
