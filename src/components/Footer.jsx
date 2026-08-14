@@ -1,105 +1,137 @@
 import { Link } from 'react-router-dom'
+import { MapPin, Phone, Mail, Linkedin, Instagram, Facebook, Handshake, Leaf } from 'lucide-react'
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
-    <footer className="footer" style={{ backgroundColor: 'var(--bottle-green)', color: '#fff', paddingTop: '80px', paddingBottom: '40px', borderTopLeftRadius: '80px', borderTopRightRadius: '80px', marginTop: '-40px', position: 'relative', zIndex: 5 }}>
+    <footer className="footer" style={{ backgroundColor: 'var(--bg-secondary)', color: 'var(--text-secondary)', position: 'relative' }}>
+      
       <div className="container">
-        {/* CTA Banner inside footer */}
-        <div style={{ backgroundColor: 'var(--forest-green)', borderRadius: '24px', padding: '48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '80px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}>
-          <div style={{ maxWidth: '600px' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '16px', color: '#fff' }}>Ready to transform your industrial operations?</h2>
-            <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.8)' }}>Get in touch with our experts today to discuss your carbon requirements.</p>
+        {/* Floating CTA Banner */}
+        <div style={{
+          backgroundColor: '#051f15',
+          borderRadius: '24px',
+          padding: '48px 64px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '32px',
+          marginTop: '-100px', // Pull up to overlap the wave divider
+          marginBottom: '80px',
+          position: 'relative',
+          zIndex: 10,
+          boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
+            <div style={{ color: 'var(--jade-green)' }}>
+              <Handshake size={64} />
+            </div>
+            <div>
+              <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '8px' }}>Ready to Partner with Us?</h2>
+              <p style={{ color: 'rgba(255,255,255,0.7)', margin: 0, fontSize: '1rem' }}>Get in touch for competitive pricing on premium carbon products.</p>
+            </div>
           </div>
-          <div>
-            <Link to="/contact" className="btn-primary" style={{ backgroundColor: 'var(--jade-green)' }}>
-              Contact Us <span style={{ marginLeft: '8px' }}>&rarr;</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
+            <Link to="/contact" className="btn-primary" style={{ backgroundColor: 'var(--jade-green)', color: 'var(--dark-900)' }}>
+              Request a Quote &rarr;
+            </Link>
+            <Link to="/contact" style={{ color: '#fff', textDecoration: 'none', fontWeight: '600' }}>
+              Or Contact Us
             </Link>
           </div>
         </div>
 
-        <div className="footer-grid">
-          <div className="footer-brand">
-            <Link to="/" className="nav-logo" style={{ marginBottom: '24px', display: 'inline-block' }}>
-              <span style={{ fontSize: '1.8rem', fontWeight: '800', color: '#fff' }}>GreenLiving</span>
+        {/* 4-Column Footer Links */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '48px', marginBottom: '64px' }}>
+          
+          {/* Column 1: Logo & Info */}
+          <div>
+            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none', marginBottom: '24px' }}>
+              <img src="/images/logo.webp" alt="Greenliving Group Logo" style={{ height: '56px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+              <span style={{ fontSize: '1.5rem', fontWeight: '700', color: '#fff', letterSpacing: '-0.5px', textTransform: 'uppercase' }}>GreenLiving</span>
             </Link>
-            <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
-              India's premier strategic carbon solutions provider, powering industries across
-              nuclear energy, defense, steel, aluminium, and more. Trusted by leading government
-              and private sector organisations nationwide.
+            <p style={{ fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '24px', color: 'var(--text-muted)' }}>
+              India's premier strategic carbon solutions provider, powering industries across India and beyond with reliable, sustainable and high-quality products.
             </p>
-          </div>
-
-          <div>
-            <h4 style={{ color: 'var(--jade-green)' }}>Quick Links</h4>
-            <div className="footer-links">
-              <Link to="/about">About Us</Link>
-              <Link to="/sectors">Sectors</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/associates">Associates</Link>
-              <Link to="/global-presence">Global Presence</Link>
-              <Link to="/contact">Contact Us</Link>
+            <div style={{ display: 'flex', gap: '16px' }}>
+              <a href="#" style={{ color: 'var(--jade-green)', width: '36px', height: '36px', borderRadius: '50%', backgroundColor: 'rgba(0,168,107,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>
+                <Facebook size={18} />
+              </a>
+              <a href="#" style={{ color: 'var(--jade-green)', width: '36px', height: '36px', borderRadius: '50%', backgroundColor: 'rgba(0,168,107,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>
+                <Linkedin size={18} />
+              </a>
+              <a href="#" style={{ color: 'var(--jade-green)', width: '36px', height: '36px', borderRadius: '50%', backgroundColor: 'rgba(0,168,107,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>
+                <Instagram size={18} />
+              </a>
             </div>
           </div>
 
+          {/* Column 2: Quick Links */}
           <div>
-            <h4 style={{ color: 'var(--jade-green)' }}>Top Products</h4>
-            <div className="footer-links">
-              <Link to="/products">Anthracite Coal</Link>
-              <Link to="/products">Met Coke</Link>
-              <Link to="/products">CPC</Link>
-              <Link to="/products">Carbon Anode</Link>
-              <Link to="/products">Pet Coke</Link>
-              <Link to="/products">Activated Carbon</Link>
-            </div>
+            <h4 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '24px', fontWeight: '700' }}>Quick Links</h4>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {['About Us', 'Sectors', 'Products', 'Associates', 'Global Presence', 'Contact Us'].map((link) => (
+                <li key={link}>
+                  <Link to={`/${link.toLowerCase().replace(' ', '-')}`} style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.95rem' }}>
+                    {link}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
+          {/* Column 3: Top Products */}
           <div>
-            <h4 style={{ color: 'var(--jade-green)' }}>Contact Info</h4>
-            <div className="footer-contact-item">
-              <span className="fc-icon">
-                <img src="/images/google-map-icon.svg" alt="Map" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
-              </span>
-              <a href="https://maps.google.com/?q=306,+Edge,+Vidhan+Sabha+Road,+Mowa,+Raipur+-+492001,+Chhattisgarh,+India" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>306, Edge, Vidhan Sabha Road, Mowa, Raipur - 492001, Chhattisgarh, India</a>
-            </div>
-            <div className="footer-contact-item">
-              <span className="fc-icon">
-                <img src="/images/accept-call-icon.svg" alt="Phone" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
-              </span>
-              <span style={{ display: 'flex', flexDirection: 'column' }}>
-                <a href="tel:+918919553938" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>+91 891 955 3938</a>
-                <a href="tel:+916200349081" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>+91 620 034 9081</a>
-              </span>
-            </div>
-            <div className="footer-contact-item">
-              <span className="fc-icon">
-                <img src="/images/gmail-icon.svg" alt="Email" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
-              </span>
-              <a href="mailto:greenliving.vizag@gmail.com" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>greenliving.vizag@gmail.com</a>
-            </div>
+            <h4 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '24px', fontWeight: '700' }}>Top Products</h4>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {['Anthracite Coal', 'Met Coke', 'CPC', 'Carbon Anode', 'Pet Coke', 'Activated Carbon'].map((link) => (
+                <li key={link}>
+                  <Link to="/products" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.95rem' }}>
+                    {link}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Contact Info */}
+          <div>
+            <h4 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '24px', fontWeight: '700' }}>Contact Info</h4>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <li style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                <div style={{ color: 'var(--jade-green)', marginTop: '2px' }}><MapPin size={20} /></div>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.5 }}>
+                  306, Edge, Vidhan Sabha Road,<br />Mowa, Raipur - 492001,<br />Chhattisgarh, India
+                </span>
+              </li>
+              <li style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+                <div style={{ color: 'var(--jade-green)' }}><Phone size={20} /></div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <span style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>+91 93196 53058</span>
+                  <span style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>+91 62306 53308</span>
+                </div>
+              </li>
+              <li style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+                <div style={{ color: 'var(--jade-green)' }}><Mail size={20} /></div>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>greenliving4raipur@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Bottom Bar */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '24px', paddingBottom: '24px' }}>
+          <p style={{ color: 'var(--text-muted)', margin: 0, fontSize: '0.85rem' }}>
+            © 2026 Greenliving Group. All Rights Reserved.
+          </p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+            <span>Strategic Carbon Solutions</span>
+            <Leaf size={16} color="var(--jade-green)" />
           </div>
         </div>
 
-        <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255,255,255,0.1)', marginTop: '48px', paddingTop: '24px' }}>
-          <span style={{ color: 'rgba(255,255,255,0.5)' }}>© 2026 GreenLiving Group. All Rights Reserved.</span>
-          <span style={{ color: 'rgba(255,255,255,0.5)' }}>Strategic Carbon Solutions</span>
-          <div className="social-links">
-            <a href="https://www.linkedin.com/company/greenliving-vizag/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="social-link" title="LinkedIn" style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-              </svg>
-            </a>
-            <a href="#" className="social-link" title="Instagram" style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   )
 }

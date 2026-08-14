@@ -1,83 +1,96 @@
-import { useState } from 'react'
+import { useRef } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import WaveDivider from './WaveDivider'
 
-const allProducts = [
-  { name: 'Anthracite Coal', category: 'coal', emoji: '⛏️', desc: 'Ultra-high carbon content coal for industrial furnaces' },
-  { name: 'PCI Coal', category: 'coal', emoji: '🔥', desc: 'Pulverized coal injection for blast furnace optimization' },
-  { name: 'Thermal Coal', category: 'coal', emoji: '🌡️', desc: 'Energy-grade coal for power generation and heating' },
-  { name: 'Activated Carbon', category: 'carbon', emoji: '🧫', desc: 'Highly porous carbon for filtration and purification' },
-  { name: 'CPC', category: 'coke', emoji: '🪨', desc: 'Calcined Petroleum Coke for anode manufacturing' },
-  { name: 'Met Coke', category: 'coke', emoji: '🧱', desc: 'Metallurgical coke for iron and steel smelting' },
-  { name: 'Coke Fines', category: 'coke', emoji: '🌑', desc: 'Fine-grade coke particles for various applications' },
-  { name: 'Carburiser', category: 'carbon', emoji: '⚗️', desc: 'Carbon additive for steelmaking and foundry' },
-  { name: 'Carbon Raiser', category: 'carbon', emoji: '📈', desc: 'Premium carbon for increasing carbon content in steel' },
-  { name: 'Carbon Anode', category: 'carbon', emoji: '🔋', desc: 'Pre-baked anodes for aluminium smelting' },
-  { name: 'Carbon Blocks', category: 'carbon', emoji: '🧊', desc: 'Dense carbon blocks for furnace lining' },
-  { name: 'Tyre Carbon', category: 'carbon', emoji: '🛞', desc: 'Recovered carbon from tyre pyrolysis' },
-  { name: 'Dolochar', category: 'specialty', emoji: '💎', desc: 'By-product from sponge iron production' },
-  { name: 'Pet Coke', category: 'coke', emoji: '⬛', desc: 'Petroleum coke for cement and power industries' },
-]
-
-const categories = [
-  { id: 'all', label: 'All Products' },
-  { id: 'coal', label: 'Coals' },
-  { id: 'coke', label: 'Coke Products' },
-  { id: 'carbon', label: 'Carbon Products' },
-  { id: 'specialty', label: 'Specialty' },
+const productsData = [
+  { name: 'Anthracite Coal', category: 'COAL', image: 'https://images.unsplash.com/photo-1587309995543-c07dd865b458?auto=format&fit=crop&q=80&w=400' },
+  { name: 'CPC', category: 'COAL', image: 'https://images.unsplash.com/photo-1621501103258-3e1346ce2361?auto=format&fit=crop&q=80&w=400' },
+  { name: 'Met Coke', category: 'COAL', image: 'https://images.unsplash.com/photo-1590501192534-11a511ff3e41?auto=format&fit=crop&q=80&w=400' },
+  { name: 'Carbon Anode', category: 'COAL', image: 'https://images.unsplash.com/photo-1558222218-b7b54eede3f3?auto=format&fit=crop&q=80&w=400' },
+  { name: 'Pet Coke', category: 'COAL', image: 'https://images.unsplash.com/photo-1616422312217-1f9e0787a7d4?auto=format&fit=crop&q=80&w=400' },
 ]
 
 export default function Products() {
-  const [activeFilter, setActiveFilter] = useState('all')
+  const scrollRef = useRef(null)
 
-  const filtered = activeFilter === 'all'
-    ? allProducts
-    : allProducts.filter(p => p.category === activeFilter)
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = 350
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' })
+    }
+  }
 
   return (
-    <section className="section products" id="products" style={{ backgroundColor: 'var(--green-50)', paddingTop: '120px', paddingBottom: '120px' }}>
+    <section className="section products" id="products" style={{ backgroundColor: '#e2efd9', paddingTop: '160px', paddingBottom: '200px', position: 'relative' }}>
       <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-          <span className="section-label reveal" style={{ backgroundColor: 'var(--green-100)', color: 'var(--jade-green)', border: 'none' }}>OUR PRODUCTS</span>
-          <h2 className="section-title reveal reveal-delay-1" style={{ color: 'var(--dark-900)' }}>Our Product Portfolio</h2>
-          <p className="section-subtitle reveal reveal-delay-2" style={{ margin: '0 auto', color: 'var(--text-secondary)' }}>
-            A comprehensive range of carbon and coal-based products for every industrial need
-          </p>
-        </div>
-
-        <div className="product-filters reveal reveal-delay-3">
-          {categories.map(cat => (
-            <button
-              key={cat.id}
-              className={`filter-btn${activeFilter === cat.id ? ' active' : ''}`}
-              onClick={() => setActiveFilter(cat.id)}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
-
-        <div className="products-grid">
-          {filtered.map((product, i) => (
-            <div className="product-card reveal" key={product.name} style={{ transitionDelay: `${i * 0.05}s` }}>
-              <div className="product-image">
-                {product.emoji}
-              </div>
-              <div className="product-info">
-                <h3>{product.name}</h3>
-                <p>{product.desc}</p>
-                <span className="product-tag">{product.category}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="specialty-banner reveal">
-          <div className="banner-icon">🎯</div>
+        
+        {/* Two-Column Header */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '64px', flexWrap: 'wrap', gap: '24px' }}>
           <div>
-            <h3>Customised Solutions Available</h3>
-            <p>We also offer specialised carbon products tailored to your exact industrial specifications. Contact us for bespoke formulations.</p>
+            <span className="section-label reveal" style={{ backgroundColor: 'var(--green-200)', color: 'var(--bottle-green)', border: 'none', fontWeight: '800' }}>OUR PRODUCTS</span>
+            <h2 className="section-title reveal reveal-delay-1" style={{ color: 'var(--dark-900)', marginBottom: 0, marginTop: '16px', fontSize: '3rem' }}>What We Deal In</h2>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
+            <p className="section-subtitle reveal reveal-delay-2" style={{ margin: '0', color: 'var(--dark-600)', maxWidth: '300px', fontSize: '1rem', fontWeight: '600' }}>
+              High quality carbon and coal-based products tailored for your industrial needs.
+            </p>
+            <button className="btn-primary" style={{ backgroundColor: 'var(--jade-green)' }}>
+              View All Products &rarr;
+            </button>
           </div>
         </div>
+
+        {/* Products Carousel */}
+        <div style={{ position: 'relative' }}>
+          {/* Controls */}
+          <button onClick={() => scroll('left')} style={{ position: 'absolute', left: '-20px', top: '50%', transform: 'translateY(-50%)', zIndex: 10, width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,0,0,0.05)', border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+            <ChevronLeft size={24} color="var(--dark-900)" />
+          </button>
+          
+          <button onClick={() => scroll('right')} style={{ position: 'absolute', right: '-20px', top: '50%', transform: 'translateY(-50%)', zIndex: 10, width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,0,0,0.05)', border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+            <ChevronRight size={24} color="var(--dark-900)" />
+          </button>
+
+          {/* Scrolling Container */}
+          <div 
+            ref={scrollRef}
+            style={{ 
+              display: 'flex', 
+              gap: '24px', 
+              overflowX: 'auto', 
+              scrollbarWidth: 'none', // Firefox
+              msOverflowStyle: 'none', // IE and Edge
+              padding: '20px 0'
+            }}
+            className="hide-scroll"
+          >
+            {productsData.map((product, i) => (
+              <div 
+                key={i} 
+                style={{ 
+                  flex: '0 0 auto', 
+                  width: '320px', 
+                  backgroundColor: '#ffffff', 
+                  borderRadius: '24px', 
+                  padding: '24px',
+                  boxShadow: '0 10px 30px rgba(0,0,0,0.03)'
+                }}
+              >
+                <div style={{ backgroundColor: '#f0f0f0', borderRadius: '16px', height: '200px', marginBottom: '24px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src={product.image} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--dark-900)', marginBottom: '12px' }}>{product.name}</h3>
+                <span style={{ display: 'inline-block', backgroundColor: '#e2efd9', color: 'var(--bottle-green)', padding: '6px 12px', borderRadius: '100px', fontSize: '0.75rem', fontWeight: '800', textTransform: 'uppercase' }}>
+                  {product.category}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
+
+      <WaveDivider fill="var(--bg-secondary)" />
     </section>
   )
 }

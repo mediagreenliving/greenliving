@@ -31,6 +31,8 @@ function CountUp({ end, suffix = '' }) {
   return <span ref={ref}>{count}{suffix}</span>
 }
 
+import WaveDivider from './WaveDivider'
+
 export default function Hero() {
   const canvasRef = useRef(null)
 
@@ -112,7 +114,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="hero curved-bottom" id="hero">
+    <section className="hero" id="hero">
       {/* Background image */}
       <div className="hero-bg-image"></div>
 
@@ -186,6 +188,8 @@ export default function Hero() {
           <div className="scroll-indicator-dot"></div>
         </div>
       </div>
+      
+      <WaveDivider fill="var(--green-50)" />
     </section>
   )
 }

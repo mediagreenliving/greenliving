@@ -210,10 +210,10 @@ ul {
   padding: 12px 0;
   min-height: 96px; /* Reserve space for logo to prevent CLS */
   transition: var(--transition-smooth);
-  background: var(--glass-bg);
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border-bottom: 1px solid var(--glass-border);
+  background: rgba(0, 10, 5, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
 }
 
@@ -308,7 +308,7 @@ ul {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--green-600);
+  color: var(--jade-green);
 }
 
 .nav-links a:hover::after,
@@ -704,11 +704,11 @@ ul {
 
 .hero-stat-label {
   font-size: 0.75rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.6);
-  margin-top: 2px;
+  font-weight: 700;
+  color: var(--jade-green);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  margin-top: 2px;
 }
 
 /* ---------- ABOUT & HEX GRID ---------- */
@@ -3180,3 +3180,8 @@ ul {
     text-align: center;
   }
 }
+.sector-image-card:hover .sector-img-bg { transform: scale(1.05); }
+
+
+.hide-scroll::-webkit-scrollbar { display: none; }
+
