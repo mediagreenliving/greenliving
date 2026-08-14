@@ -5,54 +5,46 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Custom Palette from Image */
-  --olive: #808000;
-  --mehendi: #4f7942;
-  --bottle-green: #006a4e;
-  --forest-green: #228b22;
-  --jade-green: #00a86b;
-  --emerald-green: #009b77;
-
   /* Logo Palette (Professional & Eye-Comforting) */
-  --green-50: #f4fbf7;
-  --green-100: #e2f5ec;
-  --green-200: #c2e9d7;
-  --green-300: var(--jade-green);     /* L: 66% - Lightest */
-  --green-400: var(--emerald-green);  /* L: 61% */
-  --green-500: var(--forest-green);   /* L: 55% */
-  --green-600: var(--olive);          /* L: 50% */
-  --green-700: var(--mehendi);        /* L: 45% */
-  --green-800: var(--bottle-green);   /* L: 38% - Darkest */
-  --green-900: #004d38;
+  --green-50: #f1f9e8;
+  --green-100: #dff0cc;
+  --green-200: #c1e49e;
+  --green-300: #aedb57;
+  --green-400: #20c98a; 
+  --green-500: #00A86B;
+  --green-600: #008f5a;
+  --green-700: #00764a;
+  --green-800: #005d3a;
+  --green-900: #00442a;
 
-  /* Accent — Premium Emerald for a professional modern look */
-  --accent: var(--emerald-green);
-  --accent-light: var(--jade-green);
-  --accent-glow: rgba(0, 155, 119, 0.2);
-  --accent-subtle: rgba(0, 155, 119, 0.08);
+  /* Accent — Logo green for highlights/glows */
+  --accent: #00A86B;
+  --accent-light: #20c98a;
+  --accent-glow: rgba(0, 168, 107, 0.2);
+  --accent-subtle: rgba(0, 168, 107, 0.08);
 
   /* Gold accent for premium touches */
   --gold: #c9a84c;
   --gold-light: #e0c56e;
 
-  /* Dark Theme Backgrounds & Text */
-  --bg-primary: #0a0f0b;
-  --bg-secondary: #121a14;
-  --bg-tertiary: #19241b;
+  /* Light Theme Backgrounds & Text */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
 
-  --text-primary: #f4f7f2;
-  --text-secondary: #c2d6b3;
-  --text-muted: #8fa98a;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
 
-  --border-color: #233325;
-  --border-light: #152417;
+  --border-color: #e5e7eb;
+  --border-light: #f3f4f6;
 
   /* Glass */
-  --glass-bg: rgba(10, 15, 11, 0.85);
-  --glass-border: rgba(74, 154, 48, 0.3);
-  --glass-hover: rgba(74, 154, 48, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 168, 107, 0.3);
+  --glass-hover: rgba(0, 168, 107, 0.15);
 
-  /* Dark vars mapped appropriately */
+  /* Dark vars mapped appropriately (keep these for elements we want dark) */
   --dark-950: #050805;
   --dark-900: #0a0f0b;
   --dark-800: #121a14;
@@ -63,7 +55,7 @@
   --dark-300: #aedb57;
   --white: #ffffff;
   /* Actual white now */
-  --text-secondary: #c2d6b3;
+  --text-secondary: #4b5563;
 
   /* Spacing */
   --section-padding: 100px 0;
@@ -142,24 +134,6 @@ ul {
 .section {
   padding: var(--section-padding);
   position: relative;
-}
-
-.curved-bottom {
-  border-bottom-left-radius: 50% 80px;
-  border-bottom-right-radius: 50% 80px;
-  margin-bottom: -40px;
-  position: relative;
-  z-index: 2;
-  padding-bottom: 120px;
-}
-
-.curved-top {
-  border-top-left-radius: 50% 80px;
-  border-top-right-radius: 50% 80px;
-  margin-top: -40px;
-  position: relative;
-  z-index: 1;
-  padding-top: 120px;
 }
 
 .section-label {
@@ -253,29 +227,6 @@ ul {
   box-shadow: 0 4px 12px rgba(74, 122, 26, 0.3);
 }
 
-.product-card {
-  background: #fff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 106, 78, 0.1);
-}
-
-.product-image {
-  height: 160px;
-  background: var(--green-50);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-}
-
 .nav-logo-text span {
   color: var(--green-500);
 }
@@ -318,9 +269,9 @@ ul {
 
 .nav-cta {
   padding: 10px 24px !important;
-  background: var(--jade-green) !important;
+  background: linear-gradient(135deg, var(--green-600), var(--green-500)) !important;
   color: #fff !important;
-  border-radius: 50px !important;
+  border-radius: 100px;
   font-weight: 600 !important;
   font-size: 0.9rem !important;
   transition: var(--transition-smooth) !important;
@@ -565,8 +516,8 @@ ul {
 
 .btn-primary {
   padding: 16px 36px;
-  background: var(--jade-green);
-  color: var(--dark-900);
+  background: linear-gradient(135deg, var(--green-600), var(--green-500));
+  color: #fff;
   border: none;
   border-radius: 100px;
   font-family: 'Inter', sans-serif;
@@ -582,46 +533,25 @@ ul {
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 168, 107, 0.4);
-  color: var(--dark-900);
+  box-shadow: 0 8px 30px rgba(74, 122, 26, 0.3);
+  color: #fff;
 }
 
 .btn-secondary {
   padding: 16px 36px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 100px;
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
-}
-
-.filter-btn {
-  padding: 10px 24px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 100px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-secondary);
   cursor: pointer;
   transition: var(--transition-smooth);
-}
-
-.filter-btn:hover {
-  background: var(--green-100);
-  color: var(--jade-green);
-  border-color: var(--jade-green);
-}
-
-.filter-btn.active {
-  background: var(--bottle-green);
-  color: #fff;
-  border-color: var(--bottle-green);
-  box-shadow: 0 4px 12px rgba(0, 106, 78, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .btn-secondary:hover {
@@ -658,20 +588,16 @@ ul {
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  padding: 24px 48px;
-  background: var(--bottle-green);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 100px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  gap: 24px;
+  margin-top: 64px;
+  padding: 24px 32px;
+  background: rgba(18, 30, 15, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius);
   animation: fadeInUp 0.8s ease-out 0.8s both;
-  width: max-content;
-  max-width: 95%;
-  position: absolute;
-  bottom: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
+  width: 100%;
 }
 
 .hero-stat {
@@ -682,7 +608,7 @@ ul {
 }
 
 .hero-stat .stat-icon {
-  color: var(--jade-green);
+  color: var(--green-400);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1765,8 +1691,9 @@ ul {
 
 /* ---------- FOOTER ---------- */
 .footer {
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--border-color);
+  background: var(--dark-900);
+  color: var(--white);
+  border-top: 1px solid var(--dark-600);
   padding: 80px 0 32px;
 }
 
@@ -1778,7 +1705,7 @@ ul {
 }
 
 .footer-brand p {
-  color: var(--text-secondary);
+  color: var(--dark-300);
   font-size: 0.95rem;
   line-height: 1.8;
   margin-top: 20px;
@@ -1789,7 +1716,20 @@ ul {
   font-size: 1.1rem;
   font-weight: 800;
   margin-bottom: 24px;
-  color: var(--text-primary);
+  color: var(--white);
+}
+
+.footer-links a {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--green-400);
+  transform: translateX(4px);
 }
 
 .footer-links {
@@ -1798,25 +1738,13 @@ ul {
   gap: 14px;
 }
 
-.footer-links a {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  transition: var(--transition-fast);
-  font-weight: 500;
-}
-
-.footer-links a:hover {
-  color: var(--green-600);
-  padding-left: 6px;
-}
-
 .footer-contact-item {
   display: flex;
   gap: 12px;
   align-items: flex-start;
   margin-bottom: 20px;
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--dark-300);
   font-weight: 500;
 }
 
@@ -1828,13 +1756,13 @@ ul {
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--dark-600);
   padding-top: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--dark-300);
   font-weight: 500;
 }
 

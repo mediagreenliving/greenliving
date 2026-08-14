@@ -112,7 +112,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="hero curved-bottom" id="hero">
+    <section className="hero" id="hero">
       {/* Background image */}
       <div className="hero-bg-image"></div>
 
