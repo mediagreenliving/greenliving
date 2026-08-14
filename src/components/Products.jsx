@@ -33,12 +33,12 @@ export default function Products() {
     : allProducts.filter(p => p.category === activeFilter)
 
   return (
-    <section className="section products" id="products">
+    <section className="section products" id="products" style={{ backgroundColor: 'var(--green-50)', paddingTop: '120px', paddingBottom: '120px' }}>
       <div className="container">
-        <div style={{ textAlign: 'center' }}>
-          <span className="section-label reveal">What We Deal In</span>
-          <h2 className="section-title reveal reveal-delay-1">Our Product Portfolio</h2>
-          <p className="section-subtitle reveal reveal-delay-2" style={{ margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+          <span className="section-label reveal" style={{ backgroundColor: 'var(--green-100)', color: 'var(--jade-green)', border: 'none' }}>OUR PRODUCTS</span>
+          <h2 className="section-title reveal reveal-delay-1" style={{ color: 'var(--dark-900)' }}>Our Product Portfolio</h2>
+          <p className="section-subtitle reveal reveal-delay-2" style={{ margin: '0 auto', color: 'var(--text-secondary)' }}>
             A comprehensive range of carbon and coal-based products for every industrial need
           </p>
         </div>
